@@ -76,6 +76,12 @@ const Subscribe = ({ data }: SubscribeProps) => {
     setModalIsOpen(true);
     setIsPlaying(true);
     trackVideoOpenEvent('eventTracker', 'play', data.title, 'video', data.cta.video, locale);
+    setMilestones({
+      25: false,
+      50: false,
+      75: false,
+      100: false,
+    });
   };
   const closeModal = () => {
     setModalIsOpen(false);
@@ -277,6 +283,15 @@ gsap.fromTo(
   };
 
   const handlePlay = () => {
+      if (currentTime <= 1) {
+      // Reset milestones for a new playback session
+      setMilestones({
+        25: false,
+        50: false,
+        75: false,
+        100: false,
+      });
+    }
     if (currentTime > 1) {
       trackVideoEvent('eventTracker', 'play', videoDuration, 'video', data.title, data.cta.video, currentTime.toString(), locale);
     }
@@ -293,6 +308,17 @@ gsap.fromTo(
       (progress.playedSeconds / videoDuration) * 100
     );
 
+    // Detect if video was seeked backward (replay scenario)
+    if (progress.playedSeconds < currentTime - 1) {
+      // Reset milestones when video is replayed/seeked back
+      setMilestones({
+        25: false,
+        50: false,
+        75: false,
+        100: false,
+      });
+    }
+    
     if (percentWatched == 0 && progress.playedSeconds < 1) {
       trackVideoEventByPercentage('eventTracker', 'progress', '0%', 'video', videoDuration, data.title, data.cta.video, '0', locale);
     }

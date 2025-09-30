@@ -40,6 +40,7 @@ export type AccordianProps = {
   preText?: string;
   postText?: string;
   text?: string;
+  imageLqip?: string;
 } & AccordionInjectedProps;
 
 /** Internal context used only when wrapped by AccordionGroup */
@@ -65,6 +66,7 @@ const Accordian = ({
   image,
   preText,
   postText,
+  imageLqip,
   index, // injected by group
 }: AccordianProps): JSX.Element => {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -98,7 +100,7 @@ const Accordian = ({
       onToggle?.();
     }
   };
-
+  
   return (
     <>
       <div
@@ -110,7 +112,12 @@ const Accordian = ({
         {image && (
           <div className="box-img">
             {/* Next 13+: use `fill` instead of layout="fill" */}
-            <img src={image} alt="accordion-bg"  />
+            <Image src={image}
+              placeholder={imageLqip ? 'blur' : 'empty'}
+              unoptimized
+              blurDataURL={imageLqip}
+              fill alt="accordion-bg"  
+            />
           </div>
         )}
 

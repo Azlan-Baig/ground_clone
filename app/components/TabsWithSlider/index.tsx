@@ -27,6 +27,7 @@ interface ITeamMember {
   image: string;
   name?: string;
   title: string;
+  imageLqip?: string;
 }
 interface IItem {
   secondaryTitle: string;
@@ -396,7 +397,7 @@ const TabsWithSlider = ({ data }: { data: ITeamData }) => {
             {/* Tab Content */}
             <div className="tab-content">
               <Swiper
-                style={{ height: swiperHeight }}
+                // style={{ height: swiperHeight }}
                 slidesPerView={4}
                 className="slider-wrapper"
                 ref={swiperRef}
@@ -442,6 +443,9 @@ const TabsWithSlider = ({ data }: { data: ITeamData }) => {
                             <div className="slide-img-wrap asspect-ratio-img tabs-with-slider-img">
                               <Image
                                 src={item?.image}
+                                unoptimized
+                                placeholder={item?.imageLqip ? 'blur' : "empty"}
+                                blurDataURL={item?.imageLqip}
                                 alt="leader-image"
                                 layout="fill"
                                 quality={100}
@@ -545,6 +549,9 @@ const TabsWithSlider = ({ data }: { data: ITeamData }) => {
                   alt="leader-image"
                   layout="fill"
                   quality={100}
+                  unoptimized
+                  placeholder={selectedMember?.imageLqip ? 'blur' : "empty"}
+                  blurDataURL={selectedMember?.imageLqip}
                 />
               </div>
             )}

@@ -22,12 +22,14 @@ interface OverviewProps {
     description?: PortableTextBlock[];
     image?: string;
     imageMobile?: string;
+    imageLqip?: string;
+    imageMobileLqip?: string;
   };
 }
 
+
 const Overview = ({ data }: OverviewProps) => {
   const isSmallScreen = UseMediaQuery("(max-width: 600px)");
-
   return (
     <section className="sec-margin" id={data._type}>
       {/* Section Heading */}
@@ -76,6 +78,9 @@ const Overview = ({ data }: OverviewProps) => {
                       ? data?.imageMobile
                       : data?.image
                   }
+                  unoptimized
+                 placeholder={data?.imageMobileLqip || data?.imageLqip ? 'blur' : 'empty'}
+                  blurDataURL={isSmallScreen ? data?.imageMobileLqip : data?.imageLqip}
                   alt={data?.imageAlt || "overview"}
                   fill
                 />

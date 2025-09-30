@@ -18,7 +18,8 @@ type IpoOverViewProps = {
     title?: string;
     _type?: string;
     bottomText?: string;
-
+    imageLqip?: string;
+    imageMobileLqip?: string;
     description?: PortableTextBlock[];
     items?: {
       postFix?: string;
@@ -59,6 +60,9 @@ export default function IpoOverview({ data }: IpoOverViewProps) {
                 <ParallaxAnim className="parallaxPT">
                   <Image
                     fill
+                    unoptimized
+                     placeholder={data?.imageMobileLqip || data?.imageLqip ? 'blur' : 'empty'}
+                    blurDataURL={isSmallScreen ? data?.imageMobileLqip : data?.imageLqip}
                     src={
                       isSmallScreen && data?.imageMobile
                         ? data?.imageMobile
