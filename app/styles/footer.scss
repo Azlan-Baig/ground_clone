@@ -1,0 +1,384 @@
+.footer {
+  background-color: $Yankees-Blue;
+  position: relative;
+  z-index: 1;
+  padding-top: 6.25rem;
+  padding-bottom: 3.75rem;
+  @media #{$vpDesktop1680} {
+    padding-bottom: 2.5rem;
+    padding-top: 5rem;
+  }
+  @media #{$vpDesktop1280} {
+    padding-top: 3.75rem;
+  }
+  @media #{$vpTablet991} {
+    padding-top: 3.75rem;
+    padding-bottom: 2.5rem;
+  }
+  @media #{$vpMobile600} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .footer-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    height:  32.87506rem;
+    pointer-events: none;
+    @media #{$vpDesktop1680} {
+      height:  24.56975rem;
+    }
+    @media #{$vpDesktop1280} {
+      height: 21.75rem;
+    }
+    @media #{$vpTablet991} {
+      height: 12.87506rem;
+    }
+    @media #{$vpMobile600} {
+      height: 12.50006rem;
+    }
+    img {
+      padding: 0.63rem;
+      object-fit: fill;
+      width: 100%;
+      height: 100%;
+      @media #{$vpDesktop1680} {
+        padding: 0.62rem;
+      }
+    }
+  }
+  .mid-sec {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2.33rem;
+    padding-bottom: 7.5rem;
+    @media #{$vpDesktop1680} {
+      padding-bottom: 6.25rem;
+      column-gap: 1.63rem;
+    }
+    @media #{$vpDesktop1280} {
+      padding-bottom: 5rem;
+    }
+    @media #{$vpTablet991} {
+      flex-direction: column;
+      column-gap: 0;
+      padding-bottom: 5rem;
+    }
+    @media #{$vpMobile600} {
+      flex-direction: column;
+      padding-bottom: 3.75rem;
+    }
+
+    .footer-heading {
+      flex: 0 0 34.1875rem;
+      max-width: 34.1875rem;
+      .footerItem{
+        color: $white;
+          .changes{
+            color: $Kiwi;
+          }
+      }
+      // padding-inline-end: 18.54rem;
+      @media #{$vpDesktop1680} {
+        flex: 0 0 31.875rem;
+        max-width: 31.875rem;
+      }
+      @media #{$vpDesktop1280} {
+        flex: 0 0 25rem;
+        max-width: 25rem;
+        // padding-inline-end: 9rem;
+      }
+      @media #{$vpTablet991} {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 2.5rem;
+        // padding-inline-end: 0;
+      }
+      @media #{$vpMobile600} {
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: left;
+        margin-bottom: 1.87rem;
+        padding-bottom: 0;
+      }
+    }
+    .email-sec {
+      flex: 0 0 60.3%;
+      max-width: 60.3%;
+      display: flex;
+      column-gap: 2.5rem;
+      @media #{$vpDesktop1680} {
+        flex: 0 0 58.13%;
+        max-width: 58.13%;
+      }
+      @media #{$vpDesktop1280} {
+        flex: 0 0 58.8%;
+        max-width: 58.8%;
+        column-gap: 1.88rem;
+      }
+      @media #{$vpTablet991} {
+        column-gap: 1.88rem;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      @media #{$vpMobile600} {
+        flex-direction: column;
+        flex: 0 0 100%;
+        max-width: 100%;
+        gap: 1.87rem;
+      }
+      .email-link {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        &:first-child{
+          .logo-box{
+            svg{
+              width: 19.67594rem;
+              height: 3.125rem;
+              @media #{$vpDesktop1680} {
+                width: 14.51431rem;
+                height: 2.5rem;
+              }
+              @media #{$vpDesktop1280} {
+                width: 14.51431rem;
+                height: 2.5rem;
+              }
+              @media #{$vpTablet991} {
+                width: 15.74075rem;
+                height: 2.5rem;
+              }
+            }
+          }
+        }
+        &:last-child{
+          
+          .logo-box{
+            svg{
+              width: 20.74931rem;
+              height: 5rem;
+              @media #{$vpDesktop1680} {
+                width: 15.12094rem;
+                height: 3.64375rem;
+              }
+              @media #{$vpDesktop1280} {
+                width: 15.56194rem;
+                height: 3.75rem;
+              }
+              @media #{$vpTablet991} {
+                width: 15.56194rem;
+                height: 3.75rem;
+              }
+            }
+          }
+        }
+        .logo-box {
+          height: 15.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: $Yankees-Blue;
+          border: 1px solid #fff;
+          border-radius: 0.625rem;  
+          width: 100%;
+          overflow: hidden;
+          margin-bottom: 0.65rem;
+          z-index: 1;
+          @media #{$vpDesktop1680} {
+            height: 12.25rem;
+          }
+          @media #{$vpDesktop1280} {
+            height: 10.625rem;
+            margin-bottom: 1rem;
+          }
+          @media #{$vpTablet991} {
+            height: 9.25rem;
+          }
+          @media #{$vpMobile600} {
+            margin-bottom: 0.5rem;
+          }
+          .logo-img {
+            display: flex;
+            justify-content: center;
+          }
+        }
+        .link {
+          cursor: pointer;
+          transition: all ease 0.35s;
+          display: flex;
+          align-items: center;
+          gap: 0.62rem;
+          div{
+            display: flex;
+          }
+          &:last-child{
+            margin-top: 0.62rem;
+            @media #{$vpDesktop1280} {
+              margin-top: 0.5rem;
+            }
+            @media #{$vpTablet991} {
+              margin-top: 0.63rem;
+            }
+          }
+          svg{
+            width: 1.5rem;
+            height: 1.5rem;
+            path{
+              transition: ease 0.3s all 0s;
+            }
+            @media #{$vpDesktop1680} {
+              width: 1.25rem;
+              height: 1.25rem;
+            }
+          }
+          @media #{$vpDesktop1025} {
+            &:hover {
+              color: $Kiwi;
+              svg{
+                path{
+                  stroke: $Kiwi;
+                }
+              }
+            }
+          }
+        }
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .bottom-sec {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.25rem;
+    align-items: center;
+    border-top: 1px solid $white;
+    @media #{$vpDesktop1280} {
+      padding-top: 1.25rem;
+    }
+    @media #{$vpMobile600} {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding-top: 2.5rem;
+      gap: 1.88rem;
+    }
+    .social-icons {
+      display: flex;
+      align-items: center;
+      column-gap: 1rem;
+      @media #{$vpDesktop1680} {
+       column-gap: 0.75rem;
+      }
+      @media #{$vpDesktop1280} {
+       column-gap: 0.62rem;
+      }
+      @media #{$vpMobile600} {
+        padding-bottom: 0;
+      }
+      .icon {
+        transition: all ease 0.35s;
+        width: 3.75rem;
+        height: 3.75rem;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transition: all ease 0.3s all;
+        div{
+          display: flex;
+        }
+        @media #{$vpDesktop1680} {
+          width: 3.25rem;
+          height: 3.25rem;
+        }
+        @media #{$vpDesktop1280} {
+          width: 3rem;
+          height: 3rem;
+        }
+        @media #{$vpTablet991} {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+        @media #{$vpDesktop1025} {
+          &:hover {
+            border: 1px solid $Kiwi;
+            background-color: $Kiwi;
+          }
+        }
+        svg {
+          width: 1.5625rem;
+          height: 1.5625rem;
+          @media #{$vpDesktop1680} {
+            width: 1.35419rem;
+            height: 1.35419rem;
+          }
+          @media #{$vpDesktop1280} {
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+          @media #{$vpTablet991} {
+            width: 1.04169rem;
+            height: 1.04169rem;
+          }
+          path{
+            fill: $white
+          }
+        }
+      }
+    }
+    .copyRights{
+      @media #{$vpTablet991} {
+        padding: 0 4rem;
+        text-align: center;
+        p {
+          text-align: center;
+        }
+      }
+      &.mobShow{
+        display: none;
+      }
+      @media #{$vpMobile600} {
+        padding: 0;
+        text-align: center;
+        &.mobHide{
+          display: none;
+        }
+        &.mobShow{
+          display: flex;
+        }
+      }
+    }
+    .footer-logo {
+      svg {
+        width: 12.67094rem;
+        height: auto;
+        @media #{$vpDesktop1680} {
+          width: 9.50319rem;
+        }
+        @media #{$vpDesktop1280} {
+          width: 8.23613rem;
+        }
+        @media #{$vpTablet991} {
+          width: 7.60256rem;
+        }
+        @media #{$vpMobile600} {
+          width: 6.33544rem;
+        }
+      }
+    }
+  }
+}
+
+[dir="rtl"] {
+}

@@ -1,0 +1,54 @@
+{
+    "data":{
+        "allCountries":[
+            {
+                "title":"Pakistan",
+                "code":"pk"
+            },
+            {
+                "title":"England",
+                "code":"eng"
+            },
+            {
+                "title":"UAE",
+                "code":"uae"
+            }
+        ],
+        "allowedCountries":[
+            {
+                "title":"UAE",
+                "code":"uae"
+            }
+        ],
+        "page1":{
+            "title":"Disclaimer",
+            "content":"<p>the following page contain...</p>",
+            "selectCountryLabel":"Select Country",
+            "cta":{
+                "title":"Next",
+                "href":"google.com",
+                "icon":"next.jpeg"
+            }
+        },
+        "page2":{
+            "title":"Disclaimer - Important",
+            "content":"<p>the following page contain...</p>",
+            "agreeCta":{
+                "title":"I Agree",
+                "href":"#"
+            },
+            "cancelCta":{
+                "title":"I do not agree",
+                "href":"#"
+            }
+        },
+        "page3":{
+            "title":"Restricted",
+            "content":"<p>the following page contain...</p>",
+            "cta":{
+                "title":"Back to homepage",
+                "href":"#"
+            }
+        }
+    }
+}

@@ -1,0 +1,659 @@
+.advisorsSection {
+  background-color: $white;
+  color: $black;
+
+  .advisorsHeading {
+    color: $Yankees-Blue;
+    // margin-bottom: 3.75rem;
+    max-width: 75rem;
+
+    @media #{$vpDesktop1680} {
+      // margin-bottom: 3.75rem;
+      max-width: 61.75rem
+    }
+
+    @media #{$vpDesktop1280} {
+      max-width: 56.25rem;
+    }
+
+    @media #{$vpTablet991} {
+      // margin-bottom: 2.86rem;
+      max-width: 100%
+    }
+
+    @media #{$vpMobile600} {
+      // margin-bottom: 1.43rem;
+    }
+
+    .changes {
+      color: $Silver-Foil;
+    }
+  }
+
+  .advisorsSubHeading {
+    color: $Yankees-Blue;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+
+    @media #{$vpDesktop1280} {
+      margin-bottom: 1.88rem;
+    }
+  }
+
+  .advisorsContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $Gray;
+    border-bottom: 1px solid $Gray;
+    row-gap: 2.222rem;
+    padding-block: 1.667rem;
+    margin-bottom: 5.333rem;
+
+    @media #{$vpDesktop1680} {
+      gap: 1.25rem;
+      padding-block: 1.25rem;
+      margin-bottom: 5rem;
+    }
+
+    @media #{$vpTablet991} {
+      gap: 1.43rem;
+      padding-block: 1.43rem;
+      margin-bottom: 4.286rem;
+    }
+
+    @media #{$vpMobile600} {
+      margin-bottom: 2.86rem;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .advisorsLogoWrapper {
+      position: relative;
+      width: 100%;
+      padding-top: 4.667rem;
+      flex-shrink: 0;
+
+      @media #{$vpDesktop1680} {
+        // width: 12.16881rem;
+        padding-top: 5.25rem;
+      }
+
+      @media #{$vpDesktop1280} {
+        padding-top: 5.25rem;
+      }
+
+      @media #{$vpTablet991} {
+        padding-top: 2.857rem;
+      }
+
+      @media #{$vpMobile600} {
+        padding-top: 4.357rem;
+      }
+
+      .advisorsLogo {
+        object-fit: contain;
+      }
+    }
+
+    .advisorsContentText {
+      @media #{$vpMobile600} {
+        margin-block: 0.71rem;
+      }
+
+      .advisorsText {
+        color: $black;
+        text-align: center;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .advisorsSliderWrapper {
+    width: 100%;
+    margin-top: 3.75rem;
+
+    &:last-child {
+      margin-top: 7.5rem;
+    }
+
+    @media #{$vpDesktop1680} {
+      &:last-child {
+        margin-top: 6.25rem;
+      }
+    }
+
+    @media #{$vpDesktop1280} {
+      margin-top: 2.5rem;
+
+      &:last-child {
+        margin-top: 5rem;
+      }
+    }
+
+    @media #{$vpTablet991} {
+      &:last-child {
+        margin-top: 3.5rem;
+      }
+    }
+
+    @media #{$vpMobile600} {
+      &:last-child {
+        margin-top: 3.75rem;
+      }
+    }
+
+    .advisorsSliderHeading {
+      padding-bottom: 2.22rem;
+
+      @media #{$vpDesktop1680} {
+        padding-bottom: 2.5rem;
+      }
+
+      @media #{$vpTablet991} {
+        padding-bottom: 1.43rem;
+      }
+
+      @media #{$vpMobile600} {
+        padding-bottom: 0.71rem;
+      }
+    }
+
+    .advisorsSliderText {
+      padding-bottom: 5.56rem;
+
+      @media #{$vpDesktop1680} {
+        padding-bottom: 5rem;
+      }
+
+      @media #{$vpTablet991} {
+        padding-bottom: 4.29rem;
+      }
+
+      @media #{$vpMobile600} {
+        padding-bottom: 2.86rem;
+      }
+    }
+
+    .advisorsSlider {
+      position: relative;
+
+      .advisorsSlide {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .advisorsSlideWrapper {
+          position: relative;
+          display: flex;
+          min-height: 15.5rem;
+          align-items: center;
+          margin-bottom: 1.25rem;
+          flex-direction: column;
+          justify-content: center;
+          border: 1px solid $Silver-Foil;
+          border-radius: 0.625rem;
+
+          @media #{$vpDesktop1680} {
+            min-height: 12.25rem;
+          }
+
+          @media #{$vpDesktop1280} {
+            min-height: 10.625rem;
+            margin-bottom: 1rem;
+          }
+
+          @media #{$vpTablet991} {
+            min-height: 9.25rem;
+          }
+
+          .advisorLogo {
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+
+            .advisorLogoImg {
+              object-fit: contain;
+              position: relative !important;
+              width: auto !important;
+                height: 3.125rem !important;
+
+              @media #{$vpDesktop1680} {
+                height: 2.5rem !important;
+              }
+            }
+          }
+        }
+
+        .advisorLinks {
+          .links {
+            color: $black;
+            display: block;
+            text-decoration: none;
+            display: block;
+
+          }
+
+          .styleInheriter {
+            margin-bottom: 0.62rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            a {
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              width: fit-content;
+
+              @media #{$vpDesktop1025} {
+                &:hover {
+                  span {
+                    color: $Kiwi;
+                  }
+                  .icon {
+                    svg {
+                      path {
+                        stroke: $Kiwi;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .icon {
+              display: flex;
+              align-items: center;
+              margin-inline-end: 0.63rem;
+
+              div {
+                display: flex;
+              }
+
+              svg {
+                width: 1.5rem !important;
+                height: auto !important;
+                position: relative !important;
+
+                @media #{$vpDesktop1680} {
+                  width: 1.25rem !important;
+                }
+
+                path {
+                  transition: ease 0.3s all 0s;
+                }
+              }
+            }
+
+            span {
+              color: $Gray;
+              transition: ease 0.3s all 0s;
+            }
+          }
+        }
+      }
+
+      .advisorsStaticGrid {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -1.25rem;
+        margin-right: -1.25rem;
+        row-gap: 2.5rem;
+
+        @media #{$vpDesktop1280} {
+          row-gap: 2rem;
+          margin-left: -1rem;
+          margin-right: -1rem;
+        }
+
+        @media #{$vpTablet991} {
+          row-gap: 1.87rem;
+          padding-left: -0.935rem;
+          padding-right: -0.935rem;
+        }
+
+        .advisorsStaticGridWrapper {
+          flex: 0 0 33.33%;
+          max-width: 33.33%;
+          padding-left: 1.25rem;
+          padding-right: 1.25rem;
+
+          @media #{$vpDesktop1280} {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+
+          @media #{$vpTablet991} {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding-left: 0.935rem;
+            padding-right: 0.935rem;
+            margin-bottom: 1.5rem;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          @media #{$vpMobile600} {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+          }
+        }
+
+        .advisorsSlideWrapper {
+          position: relative;
+          display: flex;
+          min-height: 15.5rem;
+          align-items: center;
+          margin-bottom: 1.25rem;
+          flex-direction: column;
+          justify-content: center;
+          border: 1px solid $Silver-Foil;
+          border-radius: 0.625rem;
+
+          @media #{$vpDesktop1680} {
+            min-height: 12.25rem;
+          }
+
+          @media #{$vpDesktop1280} {
+            min-height: 10.625rem;
+            margin-bottom: 1rem;
+          }
+
+          @media #{$vpTablet991} {
+            min-height: 9.25rem;
+          }
+
+          .advisorLogo {
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+
+            .advisorLogoImg {
+              object-fit: contain;
+              position: relative !important;
+              width: auto !important;
+              height: 3.125rem !important;
+
+              @media #{$vpDesktop1680} {
+                height: 2.5rem !important;
+              }
+            }
+          }
+        }
+
+        .advisorLinks {
+          .links {
+            color: $black;
+            display: block;
+            text-decoration: none;
+          }
+
+          .styleInheriter {
+            margin-bottom: 0.62rem;
+
+            @media #{$vpDesktop1280} {
+              margin-bottom: 0.5rem;
+            }
+
+            @media #{$vpTablet991} {
+              margin-bottom: 0.63rem;
+            }
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            a {
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              transition: ease 0.3s all 0s;
+              width: fit-content;
+
+              @media #{$vpDesktop1025} {
+                &:hover {
+                  span {
+                    color: $Kiwi;
+                  }
+                  .icon {
+                    svg {
+                      path {
+                        stroke: $Kiwi;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .icon {
+              display: flex;
+              align-items: center;
+              margin-inline-end: 0.63rem;
+              div{
+              display: flex;
+              }
+              svg {
+                width: 1.5rem !important;
+                height: auto !important;
+                position: relative !important;
+
+                @media #{$vpDesktop1680} {
+                  width: 1.25rem !important;
+                }
+
+                path {
+                  transition: ease 0.3s all 0s;
+                }
+              }
+            }
+
+            span {
+              color: $Gray;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: flex-end;
+  border-radius: 9999rem;
+
+  @media #{$vpDesktop1680} {
+    gap: 1.87rem;
+  }
+
+  @media #{$vpDesktop1280} {
+    gap: 1.25rem;
+  }
+
+  @media #{$vpTablet991} {
+    gap: 1rem;
+  }
+
+  // if you need it to stretch edge-to-edge, wrap it in a container row
+  .btn-wrap {
+    display: flex;
+    gap: 0.62rem;
+
+    @media #{$vpDesktop1280} {
+      gap: 0.5rem;
+    }
+  }
+}
+
+.controls-spacer {
+  flex: 1 1 auto;
+}
+
+.dot-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media #{$vpDesktop1680} {
+    gap: 0.25rem;
+  }
+
+  li {
+    display: flex;
+  }
+
+  .dot {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background: $Silver-Foil !important;
+    opacity: 0.5;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: ease 0.3s all 0s;
+
+    @media #{$vpDesktop1680} {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+
+    &.active {
+      width: 1rem;
+      height: 1rem;
+      opacity: 1;
+      background: $Kiwi !important;
+
+      @media #{$vpDesktop1680} {
+        width: 0.875rem;
+        height: 0.875rem;
+      }
+    }
+  }
+}
+
+.ctrl-btn {
+  width: 2.5rem; // 48px
+  height: 2.5rem;
+  min-width: 2.5rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  transition: 0.3s ease all 0s;
+  border: 1px solid $Kiwi;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  @media #{$vpDesktop1680} {
+    width: 2.25rem;
+    height: 2.25rem;
+    min-width: 2.25rem;
+    min-height: 2.25rem;
+  }
+
+  @media #{$vpTablet991} {
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
+  }
+
+  .btn-svg-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    svg {
+      height: 1rem;
+      width: 1.10525rem;
+
+      @media #{$vpDesktop1680} {
+        height: 0.9rem;
+        width: 0.99475rem;
+      }
+
+      @media #{$vpTablet991} {
+        height: 0.8rem;
+        width: 0.88419rem;
+      }
+
+      [dir="rtl"] & {
+        transform: scaleX(-1);
+      }
+    }
+
+    path {
+      transition: 0.3s ease all 0s;
+      stroke: $Kiwi;
+    }
+  }
+
+  @media #{$vpDesktop1025} {
+    &:hover {
+      background-color: $Kiwi;
+
+      .btn-svg-icon {
+        path {
+          stroke: $white !important;
+        }
+      }
+    }
+  }
+
+  &.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+/* optional: constrain bar inside your .timelineSlider container */
+.advisorsSlider {
+  .controls-bar {
+    margin-top: calc(6.25rem - 2.5rem);
+
+    @media #{$vpDesktop1680} {
+      margin-top: 3.75rem;
+    }
+
+    @media #{$vpDesktop1280} {
+      margin-top: 2.5rem;
+    }
+
+    @media #{$vpTablet991} {
+      margin-top: 2.5rem;
+    }
+  }
+}

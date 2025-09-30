@@ -1,0 +1,223 @@
+.ipo-section {
+    .mainHeading {
+        color: $Yankees-Blue;
+        max-width: 75rem;
+        @media #{$vpDesktop1680} {
+           max-width: 61.75rem;
+        }
+        @media #{$vpDesktop1280} {
+           max-width: 56.25rem;
+        }
+        @media #{$vpTablet991} {
+           max-width: 100%;
+        }
+        .changes {
+            color: $Silver-Foil;
+        }
+    }
+
+    .offer-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media #{$vpTablet991} {
+           flex-direction: column-reverse;
+           gap: 2.5rem;
+        }
+    }
+
+    .offer-image {
+        flex: 1;
+        position: relative;
+        padding-top: 0;
+        flex: 0 0 41%;
+        max-width: 41%;
+        // [dir="rtl"] & {
+        //     rotate: 180Deg;  
+        // }
+        @media #{$vpDesktop1680} {
+           flex: 0 0 39.53%;
+           max-width: 39.53%;
+        }
+        @media #{$vpDesktop1280} {
+           flex: 0 0 40%;
+           max-width: 40%;
+        }
+        @media #{$vpTablet991} {
+           flex: auto;
+           max-width: 100%;
+           width: 100%;
+           display: flex;
+        }
+        @media #{$vpMobile600} {
+           flex: auto;
+           max-width: 100%;
+           width: 100%;
+        }
+        .parallaxPT{
+            padding-top: 41.25rem;
+            border-radius: .625rem;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            .ari-box{
+                @media #{$vpTablet991} {
+                    top: 0 !important;
+                }
+            }
+            @media #{$vpDesktop1680} {
+                padding-top: 30.375rem;
+                }
+                @media #{$vpDesktop1280} {
+                padding-top: 28rem;
+                }
+                @media #{$vpTablet991} {
+                width: 100%;
+                padding-top: 21.25rem;
+                }
+                @media #{$vpMobile600} {
+                width: 100%;
+                padding-top: 20rem;
+                }
+            }
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.625rem;
+            object-fit: cover;
+        }
+    }
+
+    .offer-section {
+        padding-right: 4.125rem;
+        [dir="rtl"] & {
+            padding-right: 0;
+            padding-left: 4.125rem;
+            @media #{$vpDesktop1680} {
+             padding-right: 0;
+            padding-left: 1.75rem;
+            }
+            @media #{$vpDesktop1280} {
+                 padding-right: 0;
+            padding-left: 2.5rem;
+            }
+            @media #{$vpTablet991} {
+                 padding-right: 0;
+            padding-left:0;
+            }
+        }
+        @media #{$vpDesktop1680} {
+            padding-right: 1.75rem;
+        }
+        @media #{$vpDesktop1280} {
+            padding-right: 2.5rem;
+        }
+        @media #{$vpTablet991} {
+            padding-right: 0;
+        }
+    }
+
+    .offer-content {
+        flex: 1.2;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        flex: 0 0 46.46%;
+        max-width: 46.46%;
+        @media #{$vpDesktop1680} {
+            gap: 1.88rem;
+        }
+        @media #{$vpDesktop1280} {
+            gap: 1.87rem;
+            flex: 0 0 46%;
+            max-width: 46%;
+        }
+        @media #{$vpTablet991} {
+            gap: 1.88rem;
+            flex: 0 0 100%;
+            width: 100%;
+            max-width: 100%;
+        }
+        &.sty2 {
+            margin-top: 2.5rem;
+            margin-bottom: 7.5rem;
+            margin-inline-start: auto;
+            display: block;
+            @media #{$vpDesktop1680} {
+               margin-bottom: 6.25rem;
+            }
+            @media #{$vpDesktop1280} {
+               margin-bottom: 5rem;
+            }
+            @media #{$vpTablet991} {
+                margin-top: 1.87rem;
+                margin-bottom: 2.5rem;
+            }
+            @media #{$vpMobile600} {
+                margin-top: 1.25rem;
+                margin-bottom: 2.5rem;
+            }
+            ol{
+                list-style-position: inside;
+                padding-left: 0;
+                li{
+
+                    list-style-type: decimal;
+                }
+            }
+            ul{
+                li{
+                    list-style-position: inside;
+                    list-style-type: disc;
+                }
+            }
+            p  , ul , li , ol{
+                padding-bottom: 1.25rem;
+                text-align: left;
+                color: $Gray;
+                [dir="rtl"] & {
+                    text-align: right;
+                }
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+        .smallDescription{
+            color: $Gray;
+            margin-top: 0.03rem;
+            @media #{$vpDesktop1280} {
+                margin-top: 0.66rem;
+            }
+            @media #{$vpTablet991} {
+                margin-top: 0.54rem;
+            }
+            @media #{$vpMobile600} {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .offer-item {
+        .offer-number {
+            color: #0c1b33; // dark blue
+            margin-bottom: 1.25rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid $Kiwi;
+            @media #{$vpDesktop1280} {
+                margin-bottom: 0.75rem;
+                padding-bottom: 0.75rem;
+            }
+            @media #{$vpMobile600} {
+                margin-bottom: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+
+        .offer-text {
+            // margin-top: 0.25rem;
+            color: $Gray;
+        }
+    }
+
+}

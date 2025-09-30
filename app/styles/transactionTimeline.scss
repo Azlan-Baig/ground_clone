@@ -1,0 +1,771 @@
+.transactionTimeline {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient($GroundGradient);
+
+  .timelineTitle {
+    max-width: 47.375rem;
+    margin-bottom: 3.75rem;
+
+    span{
+      color: $Kiwi;
+    }
+    @media #{$vpDesktop1680} {
+      max-width: 37.5rem;
+      margin-bottom: 3.75rem;
+    }
+
+    @media #{$vpDesktop1280} {
+      margin-bottom: 2.5rem;
+    }
+
+    @media #{$vpTablet991} {
+      margin-bottom: 2.5rem;
+    }
+    @media #{$vpMobile600} {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  .timelineSlider {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: calc(100% + 5rem - 1px);
+    margin-left: -2.5rem;
+    [dir="rtl"] & {
+      margin-left: auto;
+      margin-right: -2.5rem;
+        @media #{$vpDesktop1680} {
+          margin-right: -1.875rem;
+        }
+        @media #{$vpDesktop1280} {
+          margin-right: -1.25rem;
+        }
+        @media #{$vpTablet991} {
+          margin-right: -1.25rem;
+        }
+    }
+    @media #{$vpDesktop1680} {
+      width: calc(100% + 3.75rem - 1px);
+      margin-left: -1.875rem;
+    }
+
+    @media #{$vpDesktop1280} {
+      width: calc(100% + 2.5rem - 1px);
+      margin-left: -1.25rem;
+    }
+    @media #{$vpTablet991} {
+      width: calc(100% + 2.5rem - 2px);
+      margin-left: -1.25rem;
+    }
+
+    @media #{$vpTablet991} {
+      width: calc(100% + 2.5rem);
+      display: block;
+    }
+
+    .swiper {
+      padding: 2.5rem;
+
+      @media #{$vpDesktop1680} {
+        padding: 1.875rem;
+      }
+
+      @media #{$vpDesktop1280} {
+        padding: 1.25rem;
+      }
+      @media #{$vpMobile600} {
+        padding: 1.25rem 5.5rem;
+      }
+    }
+
+    .swiper-slide {
+      transition: ease 0.3s all 0s;
+      
+      @media #{$vpMobile1024} {
+        &.swiper-slide-active {
+        transform: scale(1.1);
+        .fade-wrapper {
+          .fade-container {
+            .timelineCardContent {
+              background-color: $Kiwi !important;
+            }
+            .timelineCardSubtitle {
+              .icon {
+                background-color: $Yankees-Blue;
+                svg {
+                  path {
+                    stroke: $Kiwi;
+                  }
+                }
+              }
+
+            }
+            .bottomWrapper {
+              .timelineDate {
+                color: $Yankees-Blue;
+              }
+
+              .timelineCardTitle {
+                color: $Yankees-Blue;
+              }
+            }
+          }
+        }
+      }
+      }
+      
+    }
+
+    .timelineSlide {
+      height: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition:  0.35s ease 0s all;
+      &.swiper-slide-visible {
+        opacity: 1;
+        visibility: visible;
+        @media #{$vpTablet991} {
+          opacity: 0;
+          visibility: hidden;
+        }
+        &.swiper-slide-prev {
+          opacity: 0;
+          visibility: hidden;
+          @media #{$vpTablet991} {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      @media #{$vpTablet991} {
+        &.swiper-slide-prev,
+        &.swiper-slide-next,
+        &.swiper-slide-active {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      .timelineCard {
+        height: 100%;
+
+        .fade-wrapper {
+          height: 100%;
+        }
+
+        .timelineLine {}
+
+        .timelineCardContent {
+          height:100%;
+          min-height: 22.8125rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          background: $Beau-Blue;
+          border-radius: 0.625rem;
+          padding: 1.87rem;
+          justify-content: space-between;
+          transition: ease 0.3s all 0s;
+
+
+          @media #{$vpDesktop1025} {
+            &:hover {
+              transform: scale(1.1);
+              background-color: $Kiwi;
+
+              .timelineCardSubtitle {
+                .icon {
+                  background-color: $Yankees-Blue;
+
+                  svg {
+                    path {
+                      stroke: $Kiwi;
+                    }
+                  }
+                }
+
+              }
+
+              .bottomWrapper {
+                .timelineDate {
+                  color: $Yankees-Blue;
+                }
+
+                .timelineCardTitle {
+                  min-height: 3.625rem;
+                  color: $Yankees-Blue;
+                }
+              }
+            }
+          }
+
+
+          @media #{$vpDesktop1680} {
+            height:100%;
+            min-height: 16.625rem;
+            padding: 1.5rem;
+          }
+
+          @media #{$vpDesktop1280} {
+            height:100%;
+            min-height: 16.625rem;
+            padding: 1.25rem;
+            &:hover {
+              transform: scale(1.083);
+            }
+          }
+          @media #{$vpIpadlg} {
+            &:hover {
+              transform: scale(1);
+            }
+          }
+          
+          @media #{$vpTablet991} {
+            height:100%;
+            min-height: 13.6875rem;
+            padding: 1.25rem;
+          }
+
+          @media #{$vpMobile600} {
+            height:100%;
+            min-height: 11.875rem;
+          }
+
+          .timelineCardTitle {
+            color: $secondary-pale-silver;
+          }
+
+          .timelineCardSubtitle {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 1.875rem;
+
+            .icon {
+              border: 1px solid $Gray;
+              width: 3.75rem;
+              height: 3.75rem;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 50%;
+              transition: ease 0.3s all 0s;
+
+              @media #{$vpDesktop1680} {
+                width: 3.25rem;
+                height: 3.25rem;
+              }
+
+              @media #{$vpDesktop1280} {
+                width: 3rem;
+                height: 3rem;
+              }
+
+              @media #{$vpTablet991} {
+                width: 2.75rem;
+                height: 2.75rem;
+              }
+
+              @media #{$vpMobile600} {
+                width: 2.5rem;
+                height: 2.5rem;
+              }
+
+              div {
+                display: flex;
+
+                svg {
+                  width: 2.5rem;
+                  height: 2.5rem;
+
+                  @media #{$vpDesktop1680} {
+                    width: 1.73331rem;
+                    height: 1.73331rem;
+                  }
+
+                  @media #{$vpDesktop1280} {
+                    width: 2rem;
+                    height: 2rem;
+                  }
+
+                  @media #{$vpTablet991} {
+                    width: 1.83331rem;
+                    height: 1.83331rem;
+                  }
+                  @media #{$vpMobile600} {
+                    width: 1.66669rem;
+                    height: 1.66669rem;
+                  }
+
+                  path {
+                    transition: ease 0.3s all 0s;
+                  }
+                }
+              }
+            }
+
+            @media #{$vpDesktop1680} {
+              margin-bottom: 1.5rem;
+            }
+
+            @media #{$vpTablet991} {
+              margin-bottom: 1.25rem;
+            }
+
+
+          }
+
+          .bottomWrapper {
+            text-align: right;
+            [dir="rtl"] & {
+              text-align: right;
+            }
+            .timelineDate {
+              font-weight: 700;
+              color: $Gray;
+              margin-bottom: 0.62rem;
+              transition: ease 0.3s all 0s;
+              .isSar{
+                font-family: var(--SarArabic); 
+                font-size: inherit !important;
+                font-weight: inherit !important;  
+              }
+              .fontSmall{
+                font-size: 2rem;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 130%;
+               
+                &.post-small {
+                  display: block;
+                }
+                @media #{$vpDesktop1680} {
+                  font-size: 1.75rem;
+                }
+              
+                @media #{$vpDesktop1280} {
+                  font-size: 1.625rem;
+                }
+              
+                @media #{$vpTablet991} {
+                  font-size: 1.5rem;
+                }
+                @media #{$vpMobile600} {
+                  font-size: 1.25rem;
+                }
+              }
+              @media #{$vpDesktop1680} {
+                margin-bottom: 0rem;
+              }
+            }
+
+            .timelineCardTitle {
+              color: $Gray;
+              min-height: 3.625rem;
+              transition: ease 0.3s all 0s;
+              @media #{$vpDesktop1680} {
+                min-height: 3.199rem;
+              }
+              @media #{$vpTablet991} {
+                min-height: 3.079rem;
+              }
+            }
+          }
+        }
+
+        &.active {
+          .timelineCardContent {
+            background: $secondary-pale-silver;
+
+            .timelineCardTitle {
+              color: $primary-midnight-blue;
+            }
+
+            .timelineCardSubtitle {
+              .timelineDate {
+                color: $primary-midnight-blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @keyframes anim-ripple {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(0.9);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+  }
+}
+.transactionTimeline {
+  &.ipoTimeline {
+    .timelineSlider {
+      .timelineCardContent{
+        &.active{
+          .counterHeading{
+            color: $Yankees-Blue !important;
+          }
+        }
+      }
+      
+      .swiper-slide.swiper-slide-active {
+        transform: scale(1);
+        .fade-wrapper .fade-container .timelineCardContent {
+          @media #{$vpMobile1024} {
+            background: transparent !important; 
+            &.active{
+              border: 0;
+              background: $Kiwi !important;
+              transform: scale(1.1);
+              .description{
+                .timelineCardTitle{
+                  color: $Yankees-Blue;
+                }
+              }
+              .bottomContentWrap{
+                .timelineDate {
+                  color: $Yankees-Blue;
+                }
+                .timelineCardTitle{
+                  color: $Yankees-Blue;
+                }
+              }
+              &:hover{
+                border: 0;
+                background: $Kiwi;
+                transform: scale(1.1);
+                .description{
+                  .timelineCardTitle{
+                    color: $Yankees-Blue;
+                  }
+                }
+                .bottomContentWrap{
+                  .timelineDate {
+                    color: $Yankees-Blue;
+                  }
+                  .timelineCardTitle{
+                    color: $Yankees-Blue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .timelineSlide {
+        .timelineCard {
+          .timelineCardContent {
+            .bottomWrapper{
+              justify-content: space-between;
+              .counterHeading{
+                color: $white;
+              }
+              .description{
+                height: 100%;
+              }
+            }
+            .timelineCardTitle{
+              min-height: auto !important;
+              margin-bottom: 1.25rem;
+            }
+            @media #{$vpDesktop1680} {
+              min-height: 18.9375rem;
+            }
+            @media #{$vpDesktop1280} {
+              min-height: 16.625rem;
+            }
+            @media #{$vpTablet991} {
+              min-height: 13.6875rem;
+            }
+            @media #{$vpMobile600} {
+              min-height: 11.6875rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.ipoTimeline{
+  .timelineSlider{
+    .timelineSlide{
+      .swiper-slide-active {
+        @media #{$vpMobile1024} {
+          .timelineCardContent {
+            background: transparent !important; 
+          }
+        }
+      }
+      .timelineCard{
+        .timelineCardContent{
+          background: transparent;
+          border: 1px solid $white;
+          .bottomWrapper{
+            height: 100%;
+            display: flex;
+            text-align: left;
+            flex-direction: column;
+            justify-content: space-between;
+            .description{
+              .timelineCardTitle{
+                color: $white;
+              }
+            }
+            .bottomContentWrap{
+              .timelineDate {
+                color: $white;
+              }
+              .timelineCardTitle{
+                color: $white;
+              }
+            }
+          }
+          &.active{
+            border: 0;
+            background: $Kiwi;
+            transform: scale(1.1);
+            .description{
+              .timelineCardTitle{
+                color: $Yankees-Blue;
+              }
+            }
+            .bottomContentWrap{
+              .timelineDate {
+                color: $Yankees-Blue;
+              }
+              .timelineCardTitle{
+                color: $Yankees-Blue;
+              }
+            }
+            &:hover{
+              border: 0;
+              background: $Kiwi;
+              transform: scale(1.1);
+              .description{
+                .timelineCardTitle{
+                  color: $Yankees-Blue;
+                }
+              }
+              .bottomContentWrap{
+                .timelineDate {
+                  color: $Yankees-Blue;
+                }
+                .timelineCardTitle{
+                  color: $Yankees-Blue;
+                }
+              }
+            }
+          }
+          &:hover{
+            transform: scale(1);
+            background: transparent;
+            border: 1px solid $white;
+            .description{
+              .timelineCardTitle{
+                color: $white;
+              }
+            }
+            .bottomContentWrap{
+              .timelineDate {
+                color: $white;
+              }
+              .timelineCardTitle{
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// colors: tweak to your tokens if you have them
+
+
+.controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  justify-content: flex-end;
+  border-radius: 9999rem;
+  @media #{$vpDesktop1680} {
+    gap: 1.87rem;
+  }
+  @media #{$vpDesktop1280} {
+    gap: 1.25rem;
+  }
+  @media #{$vpTablet991} {
+    gap: 1rem;
+  }
+  // if you need it to stretch edge-to-edge, wrap it in a container row
+  .btn-wrap{
+    display: flex;
+    gap: 0.62rem;
+    @media #{$vpDesktop1280} {
+      gap: 0.5rem;
+    }
+  }
+}
+
+.controls-spacer {
+  flex: 1 1 auto;
+}
+
+.dot-pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.813rem; 
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @media #{$vpDesktop1680} {
+    gap: 0.5rem; 
+  }
+  li{
+    display: flex;
+  }
+  .dot {
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    background: $white;
+    opacity: 0.5;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    transition: ease 0.3s all 0s;
+    @media #{$vpDesktop1680} {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+    &.active {
+      transform: scale(1);
+      width: 1rem;
+      height: 1rem;
+      opacity: 1;
+      background: $Kiwi;
+      @media #{$vpDesktop1680} {
+        width: 0.875rem;
+        height: 0.875rem;
+      }
+    }
+  }
+}
+.transactionTimeline {
+
+  .ctrl-btn {
+    width: 2.5rem;   // 48px
+    height: 2.5rem;
+    min-width: 2.5rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    transition:  0.3s ease all 0s;
+    border: 1px solid $Kiwi;
+    background-color: transparent;
+    padding: 0;
+    @media #{$vpDesktop1680} {
+      width: 2.25rem;
+      height: 2.25rem;
+      min-width: 2.25rem;
+      min-height: 2.25rem;
+    }
+    @media #{$vpTablet991} {
+      width: 2rem;
+      height: 2rem;
+      min-width: 2rem;
+      min-height: 2rem;
+    }
+    .btn-svg-box {
+      width: 100%;  // 20px
+      height: 100%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      // padding: 0.75rem 0.7rem;
+      @media #{$vpDesktop1680} {
+        //  padding: 0.67rem 0.63rem;
+      }
+      @media #{$vpTablet991} {
+        //  padding: 0.6rem 0.56rem;
+      }
+      div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      svg{
+        width: 1.10525rem;
+        height: 1rem;
+        @media #{$vpDesktop1680} {
+          width: 0.99475rem;
+          height: 0.9rem;
+        }
+        @media #{$vpTablet991} {
+          width: 0.88419rem;
+          height: 0.8rem;
+        }
+        [dir="rtl"] & {
+          transform: scaleX(-1);
+        }
+      }
+       path {
+        transition:  0.3s ease all 0s;
+        // ensure SVGs inherit fill/stroke correctly
+        stroke: $Kiwi;
+      }
+  
+    }
+    &:hover{
+      background-color: $Kiwi;
+      .btn-svg-box {
+         path {
+          stroke: $white;
+        }
+      }
+      @media #{$vpIpadlg} {
+        background: transparent;
+        .btn-svg-box {
+          path {
+           stroke: $Kiwi;
+         }
+       }
+      }
+    }
+    &.disabled { opacity: 0.4; pointer-events: none; }
+  }
+}
+/* optional: constrain bar inside your .timelineSlider container */
+.timelineSlider + .controls-bar {
+    margin-top: 2.39rem;
+    @media #{$vpDesktop1680} {
+      margin-top: 2.705rem;
+    }
+    @media #{$vpDesktop1280} {
+      margin-top: 3.33rem;
+    }
+    @media #{$vpTablet991} {
+      margin-top: 2rem;
+    }
+    @media #{$vpMobile600} {
+      margin-top: 2.5rem;
+    }
+}
+
+
+.ipoTimeline {
+  .timelineSlider .timelineSlide .timelineCard .timelineCardContent .bottomWrapper .description {
+    margin-bottom: 0.5rem;
+  }
+}

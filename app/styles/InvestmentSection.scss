@@ -1,0 +1,49 @@
+.investmentSection {
+    z-index: 2;
+
+    .investmentWrapper {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: row;
+        column-gap: 186px;
+
+        @media #{$vpDesktop1680} {
+            column-gap: 136px;
+        }
+
+        @media #{$vpTablet991} {
+            column-gap: 50px;
+        }
+
+        @media #{$vpMobile767} {
+            margin-top: 40px;
+            flex-direction: column;
+            row-gap: 40px;
+        }
+
+        .investmentImage {
+            position: sticky;
+            top: 80px;
+
+            flex: 0 0 23.30%;
+            height: fit-content;
+
+            @media #{$vpDesktop1680} {
+                flex: 0 0 31.5%;
+            }
+
+            @media #{$vpTablet991} {
+                flex: 0 0 40.071%;
+            }
+
+            @media #{$vpMobile767} {
+                top: 0;
+                position: relative
+            }
+        }
+
+    }
+    .investmentAccordion{
+        width: 100%;
+    }
+}

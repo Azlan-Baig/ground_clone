@@ -1,0 +1,836 @@
+.tabs-with-slider-wrapper {
+  background-color: $Gray_light;
+  position: relative;
+
+  .tabs-with-slider {
+    position: relative;
+      @media #{$vpTablet991} {
+        margin-top: -1.25rem;
+      }
+      @media #{$vpMobile600} {
+        margin-top: 0;
+      }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+
+      @media #{$vpTablet991} {
+        flex-direction: column;
+      }
+
+      .heading-wrap {
+        .heading-box {
+          display: flex;
+
+          // gap: 255px;
+          // @media #{$vpDesktop1680} {
+          //   gap: 145px;
+          // }
+          // @media #{$vpMobile1210} {
+          //   gap: 24px;
+          // }
+          .sec-heading {
+            color: $clr-skyblue-700;
+            max-width: 734px;
+            padding-right: 15px;
+            @media #{$vpDesktop1680} {
+              max-width: 482px;
+            }
+            @media #{$vpTablet991} {
+              padding-right: 0;
+            }
+          }
+
+          .heading-pattern {
+            position: relative;
+            top: 20px;
+
+            @media #{$vpTablet991} {
+              top: 0;
+            }
+
+            svg {
+              @media #{$vpDesktop1680} {
+                width: 59px;
+                height: 20px;
+              }
+
+              @media #{$vpTablet991} {
+                width: 36px;
+                height: 12px;
+              }
+
+              rect {
+                stroke: $black;
+              }
+            }
+          }
+        }
+      }
+
+    }
+    .tab-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 2.5rem;
+      [dir="rtl"] & {
+        justify-content: flex-start;
+      }
+      @media #{$vpDesktop1680} { 
+        gap: 1.87rem;
+      }
+      @media #{$vpDesktop1280} { 
+        gap: 1.25rem;
+      }
+
+      @media #{$vpTablet991} {
+        gap: 1.25rem;
+      }
+
+      .tab-title-wrap {
+        width: fit-content;
+        cursor: pointer;
+
+        @media #{$vpTablet991} {
+          cursor: default;
+        }
+
+        .tab-title {
+          color: $Yankees-Blue;
+          margin-bottom: 0.1rem;
+          transition: font-size ease-in-out 0.3s;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          @media #{$vpTablet991} {
+            margin-bottom: 0;
+          }
+          @media #{$vpMobile600} {
+            transition: none;
+            gap: 0.3rem;
+          }
+          p {
+            color: inherit;
+            font-size: inherit;
+          }
+          .iconBox {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border:1px solid $Yankees-Blue;
+            position: relative;
+            background: transparent;
+            transition: all 0.35s ease;
+            @media #{$vpDesktop1680} {
+              width: 2.30769rem;
+              height: 2.30769rem;
+            }
+            @media #{$vpDesktop1280} {
+              width: 2.11rem;
+              height: 2.11rem;
+            }
+            @media #{$vpTablet991} {
+              width: 1.92306rem;
+              height: 1.92306rem;
+            }
+            @media #{$vpMobile600} {
+              margin-left: 0;
+            }
+            .icon-wrapper {
+              span {
+                position: absolute;
+                width: 1px;
+                height: 1rem;
+                background-color: $Yankees-Blue;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: all 0.35s ease;
+                &:nth-child(2) {
+                  transform: translate(-50%, -50%) rotate(90deg);
+                }
+                @media #{$vpDesktop1280} {
+                  height: 0.9rem;
+                }
+                @media #{$vpTablet991} {
+                  height: 0.833rem;
+                }
+              }
+            }
+          }
+        }
+
+        .line-dignal {
+          margin-top: -0.3rem;
+          padding-left: 0;
+          @media #{$vpMobile600} {
+            display: none;
+          }
+          .lw-dignal-box {
+            background-color: $clr-black-300;
+          }
+
+          .line {
+            background-color: $clr-black-300;
+            opacity: 0;
+            visibility: hidden;
+            width: 0;
+            transition: all 0.5s ease;
+          }
+        }
+
+        &.active {
+          // &:hover {
+          //   .tab-title {
+          //     color: $clr-black-300;
+          //   }
+          //   .line-dignal {
+          //     .lw-dignal-box {
+          //       background-color: $clr-black-300;
+          //     }
+          //     .line {
+          //       background-color: $clr-black-300;
+          //     }
+          //   }
+          // }
+          .tab-title {
+            color: $Kiwi;
+            @media #{$vpMobile600} {
+              text-decoration: underline;
+              text-underline-offset: 2px;
+            }
+          }
+          .iconBox {
+            background-color: $Kiwi;
+            border-color: $Kiwi;
+            .icon-wrapper {
+              span {
+                transform: translate(-50%, -50%) rotate(-90deg);
+                background-color: $white;
+                &:nth-child(2) {
+                  display: none;
+                }
+              }
+            }
+          }
+          .line-dignal {
+            .lw-dignal-box {
+              background-color: $Kiwi;
+            }
+
+            .line {
+              background-color: $Kiwi;
+              opacity: 1;
+              visibility: visible;
+              width: calc(100% - 3.5rem);
+              @media #{$vpDesktop1280} {
+                width: calc(100% - 3rem);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      padding-top: 3.75rem;
+      @media #{$vpDesktop1680} {
+        padding-top: 2.5rem;
+      }
+      @media #{$vpDesktop1280} {
+        padding-top: 2.5rem;
+      }
+      @media #{$vpTablet991} {
+        padding-top: 2.5rem;
+      }
+      @media #{$vpMobile600} {
+        padding-top: 1.88rem;
+      }
+      .swiper{
+        .swiper-wrapper{
+
+        }
+      }
+
+      .slider-title {
+        color: $clr-black-600;
+        margin-top: 80px;
+        margin-bottom: 60px;
+
+        @media #{$vpDesktop1680} {
+          margin-top: 40px;
+          margin-bottom: 40px;
+        }
+
+        @media #{$vpTablet991} {
+          margin-bottom: 30px;
+        }
+      }
+
+      .slider-wrapper {
+        @media #{$vpMobile600} {
+          padding-inline-end: 8.4rem;
+          overflow: visible;    
+        }
+        .slide-box {
+          display: flex;
+          flex-direction: column;
+          flex: 0 0 auto;
+          height: 100%;
+          .cs-slider {
+            height: 100%;
+            .fade-container {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+            }
+          }
+
+          img {
+            // position: unset !important;
+            // width: 100% !important;
+            // height: 100% !important;
+            // min-height: 440px !important;
+            object-fit: cover;
+            object-position: top;
+          }
+
+          .card-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 1.25rem;
+            height: 100%;
+            width: calc(100% - 1px);
+            @media #{$vpDesktop1280} {
+              margin-top: 1rem;
+            }
+            @media #{$vpMobile600} {
+              margin-top: 0.62rem;
+            }
+
+            .card-content-wrap {
+              max-width: 80%;
+
+              .card-title {
+                color: $Yankees-Blue;
+                margin-bottom: 0.63rem;
+                font-weight: 500;
+                min-height: 4rem;
+                @media #{$vpDesktop1680} {
+                  min-height: 3.599rem;
+                }
+                @media #{$vpDesktop1280} {
+                  min-height: 3.199rem;
+                  letter-spacing: -0.5px;
+                  [dir="rtl"] & {
+                     letter-spacing: 0;
+                  }
+                }
+                @media #{$vpMobile600} {
+                  margin-bottom: 0.37rem;
+                }
+              }
+
+              .card-subtitle {
+                color: $Gray;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+  @media #{$vpMobile600} {
+    .rounded_btn {
+      svg {
+        width: 0.9rem;
+      }
+    }
+  }
+}
+
+
+.slider-arrows-wrap {
+  position: relative;
+}
+.leader-modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(16 122 131 / 24%);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+  .leader-modal {
+    position: relative;
+    width: 100%;
+    border-radius: 0.625rem;
+    max-width: 70.875rem;
+    background-color: $Kiwi;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.75rem;
+    border: 1px solid $Kiwi;
+
+    @media #{$vpDesktop1680} {
+      padding: 2.5rem;
+      max-width: 52.5rem;
+    }
+    @media #{$vpDesktop1280} {
+      padding: 1.87rem;
+      max-width: 47.5rem;
+    }
+
+    @media #{$vpTablet991} {
+      max-width: 43rem;
+      padding: 1.25rem;
+    }
+
+    @media #{$vpMobile600} {
+      max-width: calc(100% - 2.5rem);
+      height: calc(100dvh - 5rem);
+    }
+    @media (max-width: 600px) and (max-height: 580px) {
+      height: calc(100dvh - 2rem);
+    }
+
+    &:focus,
+    :focus-visible {
+      outline: none;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 27px;
+
+      @media #{$vpDesktop1680} {
+        margin-bottom: 13px;
+      }
+
+      @media #{$vpTablet991} {
+        margin-bottom: 5px;
+      }
+
+      .modal-pattern {
+        svg {
+          @media #{$vpDesktop1680} {
+            width: 59px;
+            height: 20px;
+          }
+
+          @media #{$vpTablet991} {
+            width: 36px;
+            height: 12px;
+          }
+        }
+      }
+
+      .rotate-btn {
+        position: relative;
+        top: 8px;
+        right: 8px;
+
+        @media #{$vpDesktop1680} {
+          top: -2px;
+          right: -2px;
+        }
+      }
+    }
+
+    .modal-heading {
+      color: $clr-skyblue-700;
+      margin-bottom: 0.62rem;
+      @media #{$vpDesktop1680} {
+        margin-bottom: 0.375rem;
+      }
+      @media #{$vpDesktop1280} {
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    .modal-sub-heading {
+      color: $black;
+      margin-top: 10px;
+      margin-bottom: 30px;
+
+      @media #{$vpDesktop1680} {
+        margin-bottom: 30px;
+      }
+
+      @media #{$vpTablet991} {
+        margin-top: 8px;
+        margin-bottom: 20px;
+      }
+    }
+    .modal-scroll-wrap{
+      position: relative;
+      @media #{$vpMobile600} {
+        margin-bottom: 1.25rem;
+      }
+    }
+      .scroll-btn{
+        width: 0.75rem;
+        height: 0.75rem;
+        position: absolute;
+        background-color: transparent;
+        outline: none;
+        display: flex;
+        cursor: pointer;
+        padding: 0;
+        border: none;
+        align-items: center;
+         @media #{$vpDesktop1680} {
+          width: 0.625rem;
+          height: 0.625rem;
+      }
+        &.scroll-up-btn{
+          right: 0;
+          top: 0;
+          [dir="rtl"] & {
+            right: auto;
+            left: 0;
+          }
+        }
+        &.scroll-down-btn{
+          right: 0;
+          bottom: 0;
+          [dir="rtl"] & {
+            right: auto;
+            left: 0;
+          }
+        }
+        svg{
+           width: 0.75rem;
+        height: 0.75rem;
+        }
+      }
+    .modal-scrollbar {
+      max-height: 17.9rem;
+      width: calc(100% - 3.75rem);
+      position: relative;
+     
+      @media #{$vpDesktop1680} {
+        width: calc(100% - 2.5rem);
+        max-height: 11.8125rem !important;
+      }
+      @media #{$vpDesktop1280} {
+        width: calc(100% - 1.88rem);
+        max-height: 11.5rem !important;
+      }
+      @media #{$vpTablet991} {
+        max-height: 10.4375rem !important;
+      }
+      @media #{$vpMobile600} {
+        max-height: calc(100dvh - 40.5rem) !important; 
+      }
+      @media (max-width: 600px) and (max-height: 680px) {
+        max-height: calc(100dvh - 37rem) !important;
+      }
+      @media (max-width: 600px) and (max-height: 580px) {
+        max-height: calc(100dvh - 32rem) !important;
+      }
+      .simplebar-track {
+        width: 0.875rem;
+        right: -3.8rem;
+        height: calc(100% - 2.74rem);
+        top: 1.3rem;
+        [dir="rtl"] & {
+          left: -3.8rem;
+          right: auto;
+        }
+        @media #{$vpDesktop1680} {
+          width: 0.75rem;
+          right: -2.5rem;
+          height: calc(100% - 2rem);
+          top: 1rem;
+          [dir="rtl"] & {
+            left: -2.5rem;
+            right: auto;
+          }
+        }
+        
+        @media #{$vpDesktop1280} {
+          right: -1.9rem;
+          height: calc(100% - 2rem);
+          top: 1rem;
+          [dir="rtl"] & {
+            left: -1.9rem;
+            right: auto;
+          }
+        }
+
+        @media #{$vpTablet991} {
+          width:  0.625rem;;
+          right: -1.85rem;
+          [dir="rtl"] & {
+            left: -1.85em;
+            right: auto;
+          }
+        }
+
+        .simplebar-scrollbar:before {
+          background-color: $Yankees-Blue;
+          opacity: 1;
+          border-radius: 0;
+          width: 100%;
+        }
+      }
+
+      // .modal-para {
+      // }
+      .modal-para {
+        color: $Yankees-Blue;
+        p + p {
+          margin-top: 18px;
+        }
+
+        ol,
+        ul {
+          list-style-type: initial; // Reset list marker style to default
+          margin: initial; // Reset margin
+          padding: initial; // Reset padding
+          margin-top: 20px;
+          padding-left: 30px;
+        }
+
+        li {
+          list-style: initial;
+
+          & + li {
+            margin-top: 18px;
+          }
+        }
+
+        b,
+        strong {
+          font-weight: bold;
+        }
+
+        u {
+          text-decoration: underline;
+        }
+
+        i {
+          font-style: italic;
+        }
+      }
+    }
+  }
+  .dotted-bg {
+    z-index: -1;
+    position: fixed;
+  }
+}
+
+.popupContent_wrapper {
+  display: flex;
+  gap: 2.5rem;
+  @media #{$vpDesktop1680} {
+    gap: 1.26rem;
+  }
+  @media #{$vpMobile600} {
+    flex-direction: column;
+  }
+  .tabs-with-slider-img{
+    padding-top: 27.5rem;
+    @media #{$vpDesktop1680} {
+      padding-top: 20rem;
+    }
+    @media #{$vpDesktop1280} {
+      padding-top: 17.875rem;
+    }
+    @media #{$vpTablet991} {
+      padding-top: 16.5rem;
+    }
+    @media #{$vpMobile600} {
+      padding-top: 21.3125rem;
+    }
+  }
+  .sec-img {
+    flex:  0 0 39.526%;
+    max-width: 39.526%;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    @media #{$vpDesktop1680} {
+      flex: 0 0 38.26%;
+      max-width: 38.26%;
+    }
+    @media #{$vpDesktop1280} {
+      flex: 0 0 37.26%;
+      max-width: 37.26%;
+    }
+    @media #{$vpMobile600} {
+      flex: 0 0 100%;
+      max-width: 100%;
+      max-height: 21.3125rem;
+    }
+    @media (max-width: 600px) and (max-height: 680px) {
+      max-height: 18rem;
+    }
+    @media (max-width: 600px) and (max-height: 580px) {
+      max-height: 15rem;
+    }
+  }
+  .popup_content {
+    flex: 1;
+    max-width: 100%;
+    border-bottom: 1px solid $Yankees-Blue;
+    .modal-heading,
+    .modal-subHeading {
+      color: $Yankees-Blue;
+    }
+    .titleBox {
+      margin-bottom: 1.88rem;
+      @media #{$vpDesktop1680} {
+        margin-bottom: 1.25rem;
+      }
+      @media #{$vpTablet991} {
+        margin-bottom: 1rem;
+      }
+      @media #{$vpMobile600} {
+        margin-bottom: 1.25rem;
+      }
+    }
+  } 
+}
+
+.close--btn {
+  width: 100%;
+  background: $Yankees-Blue;
+  padding: calc(1rem - 1px);
+  text-align: center;
+  border-radius: 6.25rem;
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: 1px solid $Yankees-Blue;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: ease 0.3s all 0s;
+  [dir="rtl"] & {
+    font-family: var(--AvenirArabic);
+  }
+  @media #{$vpDesktop1680} {
+    padding: calc(1rem - 2px);
+    margin-top: 1.88rem;
+  }
+  @media #{$vpDesktop1280} {
+    padding: calc(1rem - 4px);
+    margin-top: 1.88rem;
+  }
+  @media #{$vpTablet991} {
+    padding: calc(1rem - 4.5px);
+    margin-top: 1.25rem;
+  }
+  P{
+    transition: ease 0.3s all 0s;
+  }
+  svg{
+      path{
+           transition: ease 0.3s all 0s;
+
+      }
+    }
+    @media #{$vpDesktop1025} {
+      &:hover{
+    background-color: transparent;
+    p{
+      color: $Yankees-Blue;
+    }
+    svg{
+      path{
+        stroke: $Yankees-Blue
+      }
+    }
+  }
+  }
+
+  .btn-svg-box {
+    padding-inline-start: 0.88rem;
+    padding-top: 0.2rem;
+  }
+}
+
+
+
+.slider-dots-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-inline-end: 2.5rem;
+  @media #{$vpDesktop1680} {
+    margin-inline-end: 1.88rem;
+  }
+  @media #{$vpDesktop1280} {
+    margin-inline-end: 1.25rem;
+  }
+  @media #{$vpTablet991} {
+    margin-inline-end: 1rem;
+  }
+  .swiper-pagination-custom  {
+    display: flex;
+    align-items: center;
+  }
+  &.hide{
+    opacity: 0;
+    height: 0;
+    pointer-events: none;
+  }
+}
+
+.custom-bullet {
+  display: inline-block;
+  width: 0.625rem;
+  height: 0.625rem;
+  margin-inline: 0 0.5rem;
+  border-radius: 50%;
+  background-color: $Silver-Foil;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  transition: all 0.353s ease;
+  @media #{$vpDesktop1680} {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  @media #{$vpDesktop1280} {
+    margin-inline: 0 0.375rem;
+  }
+  @media #{$vpMobile600} {
+    margin-inline: 0 0.75rem;
+  }
+  &:first-child {
+    margin-inline-start: 0;
+  }
+  &:last-child {
+    margin-inline-end: 0;
+  }
+}
+
+.custom-bullet-active {
+  background-color: $Kiwi; /* Active dot color */
+  width: 1rem;
+  height: 1rem;
+  @media #{$vpDesktop1680} {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}

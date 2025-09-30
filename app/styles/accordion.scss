@@ -1,0 +1,422 @@
+.accordion {
+  overflow: hidden;
+  margin-bottom: 1.25rem;
+  transition: ease 0.5s all;
+  position: relative;
+
+  @media #{$vpDesktop1680} {
+    margin-bottom: 1.25rem;
+  }
+  @media #{$vpTablet991} {
+    margin-bottom: 1.25rem;
+  }
+
+  &.open {
+    margin-bottom: 1.88rem;
+    transition: margin-bottom 0.5s ease-in;
+    @media #{$vpDesktop1680} {
+      margin-bottom: 1.87rem;
+    }
+    @media #{$vpDesktop1280} {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &.accordion:not(:first-child) {
+    margin-top: 1.87rem;
+    @media #{$vpDesktop1280} {
+      margin-top: 1.25rem;
+    }
+  }
+  &.dark-accordion {
+    .accordionTitleWrapper {
+      .accordionTitle {
+        color: $Yankees-Blue;
+      }
+      .accordionIcon {
+        svg {
+          path {
+            stroke: $Yankees-Blue;
+          }
+        }
+      }
+
+      &.open {
+        .accordionTitle {
+          color: $Yankees-Blue;
+        }
+        .accordionIcon {
+          background-color: $Kiwi;
+          border-color: $Kiwi;
+          svg {
+            path {
+              stroke: $white;
+            }
+          }
+        }
+      }
+    }
+    .accordionContent {
+      color: $black;
+    }
+  }
+  .accordionTitleWrapper {
+    transition: ease 0.5s all;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem;
+    @media #{$vpDesktop1680} {
+        gap: 1.37rem;
+    }
+    @media #{$vpDesktop1280} {
+        gap: 1rem;
+    }
+    @media #{$vpTablet991} {
+        gap: 1.25rem;
+    }
+    @media #{$vpMobile600} {
+        gap: 0rem;
+    }
+    .accordionTitle {
+      margin: auto 0;
+      margin-top: 0.56rem;
+      max-width: 90%;
+      @media #{$vpDesktop1680} {
+         margin-top: 0.63rem;
+      }
+      @media #{$vpDesktop1280} {
+         margin-top: 0.59rem;
+      }
+      @media #{$vpTablet991} {
+         margin-top: 0.47rem;
+      }
+    }
+    &.open {
+      margin-bottom: 1.88rem;
+      transition: all 0.5s ease-in;
+
+      @media #{$vpDesktop1280} {
+        margin-bottom: 1.25rem;
+      }
+      .accordionTitle {
+        color: $Yankees-Blue;
+        transition: all 0.5s ease;
+      }
+    }
+
+    .accordionIcon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid $Yankees-Blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2.5rem;
+      transition: ease 0.5s all;
+      margin: 0.37rem;
+      flex: 0 0 2.5rem;
+      max-width: 2.5rem;
+      @media #{$vpDesktop1680} {
+        width: 2.30769rem;
+        height: 2.30769rem;
+        margin: 0.35rem;
+        flex: 0 0 2.30769rem;
+        max-width: 2.30769rem;
+      }
+      @media #{$vpDesktop1280} {
+        width: 2.11538rem;
+        height: 2.11538rem;
+        margin: 0.32rem;
+        flex: 0 0 2.11538rem;
+        max-width: 2.11538rem;
+      }
+      @media #{$vpTablet991} {
+        width: 1.92306rem;
+        height: 1.92306rem;
+        margin: 0.29rem;
+        flex: 0 0 1.92306rem;
+        max-width: 1.92306rem;
+        margin-top: .5rem;
+      }
+      svg {
+        width:  1.08331rem;
+        height: 1.08331rem;
+        @media #{$vpDesktop1680} {
+          width: 1rem;
+          height: 1rem;
+        }
+        @media #{$vpDesktop1280} {
+          width: 0.91669rem;
+          height: 0.91669rem;
+        }
+        @media #{$vpTablet991} {
+          width: 0.83331rem;
+          height: 0.83331rem;
+        }
+      }
+    }
+  }
+
+  .accordionContent {
+    color: $white;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    max-height: 0;
+    max-width: 95%;
+    @media #{$vpDesktop1280} {
+      padding-inline-end: 0;
+    }
+    &.open {
+      transition: max-height 0.5s ease-in;
+    }
+  }
+}
+.accordionLine {
+  &.dark-accordionLine {
+    .line-dignal {
+      .lw-dignal-box {
+        background-color: $Yankees-Blue;
+        transition: backgroud-color 0.5s ease-in;
+      }
+      .line {
+        background-color: $Yankees-Blue;
+        transition: backgroud-color 0.5s ease-in;
+      }
+    }
+    &.open {
+      .line-dignal {
+        .lw-dignal-box {
+          background-color: $Kiwi;
+        }
+        .line {
+          background-color: $Kiwi;
+        }
+      }
+    }
+  }
+}
+
+.sec-expertiesAccordion {
+  background: $Beau-Blue;
+  padding: 1.87rem;
+  border-radius: 0.625rem;
+  margin-bottom: 1.87rem;
+  margin-top: 0;
+  position: relative;
+  @media #{$vpDesktop1680} {
+    padding: 1.5rem;
+  }
+  @media #{$vpDesktop1280} {
+    margin-bottom: 1.88rem;
+  }
+  @media #{$vpTablet991} {
+    padding: 1.88rem;
+    margin-bottom: 1.25rem;
+   .accordionIcon {
+    margin-top: 0.53rem;
+   } 
+  }
+  @media #{$vpMobile600} {
+    padding: 1.25rem;
+    .accordionIcon {
+      margin-top: 0.25rem;
+     } 
+  }
+  &.accordion:not(:first-child) {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .expertiesAccordion {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    z-index: 1;
+    .accordion--title {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      .accordionTitle {
+        margin: 0;
+        color: $Yankees-Blue;
+      }
+      .boxPercentage {
+        color: $Yankees-Blue;
+        font-weight: 700;
+        p , h1, h2, h3 , h4 , h5 , h6 , span{
+          font-weight: 700 !important;
+        }
+      }
+    }
+    .accordionIcon {
+      svg {
+        height: 1rem;
+        width: auto;
+      }
+    }
+    &.open {
+      .accordion--title {
+        .accordionTitle {
+          color: $white;
+        }
+        .boxPercentage {
+          color: $Kiwi;
+        }
+      }
+    }
+  }
+  .accordionTitleWrapper {
+    &.open {
+      margin-bottom: 0;
+    }
+  }
+  .box-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s ease;
+    height: 100%;
+    width: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(252deg, rgba(0, 0, 0, 0.00) -36.28%, rgba(0, 0, 0, 0.90) 100%);
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+  &.open {
+    .box-img {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .accordionContent {
+    position: relative;
+    z-index: 1;
+    color: $white !important;
+    .contentBox--detail {
+      max-width: 32rem;
+      @media #{$vpDesktop1680} {
+        max-width: 22.2rem;
+      }
+      @media #{$vpTablet991} {
+        max-width: 24.4rem;
+      }
+      @media #{$vpMobile600} {
+        margin-top: 0.63rem;
+      }
+      .contentTitle {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $Kiwi;
+        @media #{$vpDesktop1680} {
+          padding-bottom: 0.75rem;
+        }
+        p {
+          margin: 0;
+        }
+      }
+      .content-listing {
+        ul {
+          margin: 1rem 0 3.25rem 1rem;
+          @media #{$vpDesktop1680} {
+            margin: 0.75rem 0 2.19rem 1rem;
+          }
+          @media #{$vpMobile600} {
+            margin: 0.75rem 0 1.87rem 0.5rem;
+          }
+          .changes{
+            color: $Kiwi;
+          }
+          li {
+            position: relative;
+            padding-left: 1rem;
+            padding-bottom: 0.5rem;
+            @media #{$vpMobile600} {
+              padding-left: 0.8rem;
+            }
+            &:after {
+              content: "";
+              position: absolute;
+              width: 0.4rem;
+              height: 0.4rem;
+              top: 13px;
+              background: $white;
+              left: -0.3rem;
+              border-radius: 50%;
+              [dir="rtl"] & {
+                left: auto;
+                top: 15px;
+                right: -1rem;
+              }
+              @media #{$vpDesktop1680} {
+                width: 0.3rem;
+                height: 0.3rem;
+                top: 10px;
+              }
+              @media #{$vpMobile600} {
+                width: 0.25rem;
+                height: 0.25rem;
+                top: 8px;
+                left: 0;
+              }
+            }
+            span {
+              &.colored-text {
+                color: $Kiwi;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .rounded_btn {
+    transition: all 0.35s ease;
+    &.marginSpace{
+      margin-top: 2.19rem;
+      @media #{$vpDesktop1680} {
+        margin-top: 1.97rem;
+      }
+      @media #{$vpDesktop1280} {
+        margin-top: 1.93rem;
+      }
+      @media #{$vpTablet991} {
+        margin-top: 1.88rem;
+      }
+      @media #{$vpMobile600} {
+        margin-top: 1.3rem;
+      }
+    }
+    svg {
+      width: auto;
+      height: 1rem;
+    }
+    &.reverse {
+      transform: rotate(180deg);
+      background: $Kiwi;
+      svg {
+        path {
+          stroke: $white;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.about-the-ipo-wrapper{
+    position: relative;
+    padding-bottom: 72rem;
+    @media #{$vpDesktop1680} {
+        padding-bottom: 56rem;
+      }
+      @media #{$vpDesktop1280} {
+        padding-bottom: 52rem;
+      }
+    @media #{$vpTablet991} {
+        padding-right: 2.5rem;
+        padding-bottom: 44rem;
+     }
+     @media #{$vpMobile600} {
+        padding-right: 1.25rem;
+        padding-bottom: 54rem;
+      }
+    .about-ipo-bg{
+        .about-ipo-bg-img{
+            object-fit: cover;
+        }
+    }
+}

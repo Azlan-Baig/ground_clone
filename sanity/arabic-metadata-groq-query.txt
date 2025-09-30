@@ -1,0 +1,6 @@
+*[_type == "page"] {
+  "metaData": {
+     'metaTitle':metaTitle['ar'],
+     'metaDescription':metaDescription['ar'] 
+   },
+}[0]

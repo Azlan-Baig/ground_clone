@@ -1,0 +1,391 @@
+.subscribe {
+  position: relative;
+  .dotted-bg{
+     @media #{$vpMobile600} {
+        display: none;
+      }
+  }
+  .s-bg-layer {
+    display: grid;
+    position: relative;
+    .ari-s-bg{
+      display: flex;
+    }
+    .asspect-ratio-img {
+      padding-top: 35.7%;
+      video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .ari-box{
+        @media #{$vpTablet991} {
+          top: 0;
+        }
+      }
+      @media #{$vpDesktop1680} {
+        padding-top: 35.42%;
+      }
+      @media #{$vpDesktop1280} {
+        padding-top: 35.63%
+      }
+      @media #{$vpTablet991} {
+        padding-top: 44.28%;
+      }
+      @media #{$vpMobile600} {
+        padding-top: 82.28%
+      }
+    }
+    .media-zoom{
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 112, 192, 0.10) 0%, rgba(0, 112, 192, 0.10) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%);
+      }
+    }
+  }
+  .s-content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 3.75rem;
+    @media #{$vpDesktop1680} {
+      padding-bottom: 2.5rem;
+    }
+    @media #{$vpTablet991} {
+      padding-bottom: 1.25rem;
+    }
+    .sc-wrapper {
+      display: flex;
+      align-items: flex-end;
+      // word-spacing: normal;
+      justify-content: space-between;
+      .title{
+        max-width: 30%;
+        width: 100%;
+        @media #{$vpMobile600} {
+          max-width: 80%;
+        }
+      }
+    
+      .videoCta{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        gap: 0.63rem;
+        transition: ease 0.3s all 0s;
+        .text{
+          width: max-content;
+        }
+        @media #{$vpDesktop1680} {
+          gap: 0.62rem;
+        }
+        @media #{$vpDesktop1280} {
+          gap: 0.63rem;
+        }
+        @media #{$vpMobile1024} {
+          color: $Kiwi;
+        }
+        @media #{$vpMobile600} {
+          gap: 0.5rem;
+           
+        }
+        .playIcon{
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: 1px solid $white;
+          transition: ease 0.3s all 0s;
+          margin: 0.37rem;
+          @media #{$vpDesktop1680} {
+            width: 2.30769rem;
+            height: 2.30769rem;
+            margin: 0.35rem;
+          }
+          @media #{$vpDesktop1280} {
+            width: 2.11538rem;
+            height: 2.11538rem;
+            margin: 0.32rem;
+          }
+          @media #{$vpTablet991} {
+            width: 1.92306rem;
+            height: 1.92306rem;
+            margin: 0.29rem;
+          }
+          @media #{$vpMobile1024} {
+             border: 1px solid $Kiwi;
+                  background-color: $Kiwi;
+          }
+          div{
+            display: flex;
+            svg{
+              width: 0.80206rem;
+              height: 0.875rem;
+              @media #{$vpDesktop1680} {
+                  width: 0.74038rem;
+                  height: 0.80769rem;
+              }
+              @media #{$vpDesktop1280} {
+                width: 0.67869rem;
+                height: 0.74038rem;
+              }
+              @media #{$vpTablet991} {
+                width: 0.617rem;
+                height: 0.67306rem;
+              }
+              path{
+                transition: ease 0.3s all 0s;
+                fill: $white;
+              
+              }
+            }
+          }
+            
+        }
+        @media #{$vpDesktop1025} {
+              &:hover{
+                color: $Kiwi;
+                .playIcon{
+                  border: 1px solid $Kiwi;
+                  background-color: $Kiwi;
+                  svg{
+                      path{
+                        fill: $white;
+                      
+                      }
+                    }
+                }
+              }
+            }
+      }
+    }
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 0px;
+  .dotted-bg{
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+  }
+}
+
+.backdrop-modal-overlay {
+  background: $Yankees-Blue;
+}
+
+.video-modal:focus-visible,
+.video-modal:focus {
+  outline: none;
+}
+
+.btn-subs-cross {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  right: calc( -3.125rem - 0.31rem - 2.51rem);
+  top: 0;
+  width: 3.125rem;
+  height: 3.125rem;
+  border: 1px solid $Kiwi;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  margin: 0.31rem;
+  .btn-svg-box{
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  .closeText{
+    display: none;
+    @media #{$vpMobile600} {
+      display: block;
+    
+    }
+  }
+  @media #{$vpDesktop1680} {
+    right: calc( -2.91669rem - 0.29rem - 2.5rem);
+    width: 2.91669rem;
+    height: 2.91669rem;
+    margin: 0.29rem;
+  }
+  @media #{$vpDesktop1280} {
+    right: calc( -2.70831rem - 0.27rem - 2.5rem);
+    width: 2.70831rem;
+    height: 2.70831rem;
+    margin: 0.27rem;
+  }
+  @media #{$vpTablet991} {
+    right: calc( -2.5rem - 0.25rem - 1.88rem);
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0.25rem;
+  }
+  @media #{$vpMobile600} {
+    right: 0;
+    top: auto;
+    bottom: calc( -3rem - 2.5rem);
+    width: 100%;
+    border-radius: 30px;
+    height: 3rem;
+    margin: 0;
+    background-color: $Kiwi;
+  }
+  @media #{$vpDesktop1025} {
+    &:hover{
+      border: 1px solid $Kiwi;
+      background-color: $Kiwi;
+      svg{
+        path{
+          stroke: $white;
+        }
+      }
+    }
+  }
+  svg{
+    width: 0.9375rem;
+    height: 0.9375rem;
+    @media #{$vpDesktop1680} {
+      width: 0.875rem;
+      height: 0.875rem;
+    }
+    @media #{$vpDesktop1280} {
+      width: 0.8125rem;
+      height: 0.8125rem;
+    }
+    @media #{$vpTablet991} {
+      width: 0.75rem;
+      height: 0.75rem;
+    }
+     path{
+        stroke: $Kiwi;
+        transition: ease 0.3s all 0s;
+        @media #{$vpTablet991} {
+           stroke: $white;
+          }
+      }
+  }
+  div{
+    display: flex;
+  }
+}
+.video-modal {
+  width: 74.28%;
+  // background: linear-gradient(258.16deg, #2d3ace 1.77%, #0a1056 91.18%);
+  /* height: 78%; */
+  max-height: 98%;
+  /* height: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  align-items: flex-end;
+  position: relative;
+  /* padding: 20px; */
+  @media #{$vpDesktop1680} {
+    width: 73.62%;
+  }
+  @media #{$vpDesktop1280} {
+    width: 75%;
+  }
+  @media #{$vpTablet991} {
+    width: 66.15%;
+  }
+  @media #{$vpMobile600} {
+    width: calc(90% - 1px);
+    height: auto;
+  }
+}
+
+.video-subs-wrapper {
+  /* margin-top: 20px; */
+  // border-radius: 15px;
+  overflow: hidden;
+  background-color: transparent;
+  position: relative;
+  padding-top: 56.25%;
+  width: 100%;
+}
+.video-subs {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  video{
+    object-fit: cover;
+  }
+}
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+
+/* Ensure section masks scaling nicely */
+.subscribe {
+  position: relative;
+  overflow: hidden;
+}
+
+/* The area that contains the media should cover and clip */
+.s-bg-layer,
+.asspect-ratio-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* This wrapper is what gets scaled from 0.5 -> 1 */
+.media-zoom {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  will-change: transform, border-radius;
+}
+
+/* Make media cover at all times; scaling will reveal more/less */
+.ari-box,
+.banner-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner-img {
+  object-fit: cover;
+}
+
+/* If using Image as fallback, its parent (.ari-box) already fills, so OK */

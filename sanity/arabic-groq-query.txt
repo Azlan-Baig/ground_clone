@@ -1,0 +1,167 @@
+*[_type == "page"] {
+  sections[] {
+     _type == "header" => {
+        _type,
+        "logo": logo.asset->url,
+        menu[]{
+          'title':title['ar'],
+          'key': sectionType
+        }, 
+        languages[] {
+          title,
+          code
+        },
+        socialLinks[] {
+          "icon": icon.asset->url,
+          "url": url,
+          "isAnchorBlank": isAnchorBlank
+        },
+        legalLinks[] {
+          "title": title['ar'],
+          "url": url
+        },
+        "copyRightText": copyRightText['ar']
+     },
+      _type == "bannerSection" => {
+         _type,
+        "title": title['ar'],
+        "subtitle": subtitle['ar'],
+        "video": video,
+        "image": image.asset->url,
+        "secondarySubtitle": secondarySubtitle['ar'],
+        "secondaryTitle": secondaryTitle['ar'],
+        "secondaryDescription": secondaryDescription['ar'],
+        "stats": stats.stats[]{
+          ...,
+          "icon": icon.asset->url,
+          "title": title['ar'],
+          "count": count['ar'],
+          "subtitle": subtitle['ar'],
+        }
+        
+      },
+      _type == "journeySection" => {
+        _type,
+        "subtitle": subtitle['ar'],
+        "title": title['ar'],
+        "description": description['ar'],
+         "stats": stats.stats[]{
+          ...,
+          "icon": icon.asset->url,
+          "title": title['ar'],
+          "count": count['ar'],
+          "subtitle": subtitle['ar'],
+        },
+        "secondaryText": secondaryText['ar'],
+        "timelineTitle": timelineTitle['ar'],
+        timelines[]{
+          ...,
+          "title": title['ar'],
+          "subtitle": subtitle['ar'],
+        }
+      },
+      _type == "investmartSection" => {
+         _type,
+        "title": title['ar'],
+        highlights[]{
+          ...,
+          "title": title['ar'],
+          "description": description['ar'],
+        }
+      },
+      _type == "leadershipMessageSection" => {
+        _type,
+        "title": title['ar'],
+        message[]{
+          "contart":contart['ar'],
+          isContartRight,
+          "image": image.asset->url,
+          author{
+            "name":name['ar'],
+            "designation":designation['ar'],
+          }
+        }
+      },
+      _type == "teamSection" => {
+        _type,
+        "title": title['ar'],
+        teams[]{
+          "title":title['ar'],
+          isContartRight,
+          "icon": icon.asset->url,
+          teamMembers[]{
+            "title": title['ar'],
+            "designation":designation['ar'],
+            "contart":contart['ar'],
+            "image": image.asset->url,
+          }
+        }
+      },
+     _type == "subscribeSection" => {
+         _type,
+        "buttonText": buttonText['ar'],
+        "title": title['ar'],
+         href,
+        "image": image.asset->url,
+        "backgroundImage": backgroundImage.asset->url,
+        type
+      },
+      _type == "faqSection" => {
+         _type,
+        "title": title['ar'],
+        faqs[]{
+          ...,
+          "title": title['ar'],
+          "description": description['ar'],
+        },
+        cta{
+          ...,
+          "title": title['ar']
+        }
+      },
+     _type == "testimonialSection"=> {
+        _type,
+        testimonials[] {
+          "title": title['ar'],
+          items[] {
+            "image": image.asset->url, 
+            "title": title['ar'],
+            email,
+            website
+          }
+        },
+      },
+      _type == "resourceSection" => {
+        _type,
+        "title": title['ar'],
+        items[]{
+          "title": title['ar'],
+          cta{
+            ...,
+            "title":title['ar'],
+            "icon": icon.asset->url,
+          }
+        }
+      },
+      _type == "getInTouchSection"=> {
+        _type,
+        "title": title['ar'],
+        "items": items[] {
+          "image": image.asset->url,
+          "title": title['ar'],
+          "email": email,
+          "website": website,
+        },
+        "logo": logo.asset->url
+      },
+      _type == "footer" => {
+         _type,
+          socialLinks[] {
+          "icon": icon.asset->url,
+          "url": url,
+          "isAnchorBlank": isAnchorBlank
+        },
+        "copyRightText": copyRightText['ar']
+       }
+    }
+}[0]

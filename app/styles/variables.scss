@@ -1,0 +1,71 @@
+// Set Colors Pallets
+$black: #000000;
+$white: #ffffff;
+
+$clr-black-200: #d1d1d1;
+$clr-black-400: #888888;
+$clr-black-500: #F6F6F6;
+
+
+$clr-brown-400: #c6a371;
+$clr-brown-300: #d0b787;
+$clr-brown-500: #e7dbc1;
+
+$clr-skyblue-500: #1dc9d3;
+$clr-skyblue-600: #1993A1;
+$clr-skyblue-700: #1b7683;
+$clr-skyblue-900: #107a83;
+$clr-skyblue-800: #eefdfd;
+$clr-skyblue-1000: #1E606C;
+$clr-skyblue-1100: #75E8EB;
+
+$clr-black-300: #b0b0b0;
+$clr-black-600: #5D5D5D;
+
+$clr-green: #00343D;
+$primary-midnight-blue: #001E42;
+$secondary-inventive-orange: #E69E6C;
+$secondary-pale-silver: #D1CCBD;
+$secondary-feijoa-green: #BADF93;
+$secondary-pelorous-blue: #00A5B5;
+$secondary-cream: #EDEBE6;
+$background-cream: #F8F8F8;
+$background-line: #4D628A;
+
+// Ground Colors // 
+$Vivid-Cerulean: #00B0F0;
+$Amber: #FFC000;
+$Indigo: #243B6F;
+$French-Blue: #0070C0;
+$Silver-Foil: #A3A3A3;
+$Beau-Blue: #F3F3F3;
+$green-pigment: #00B050;
+$Gray: #797979;
+$Gray_light: #FBFBFB;
+$Kiwi: #C0C746;
+$Yankees-Blue: #1F1A42;
+$GroundGradient:  180deg, #277DEA 0%, #1F1A42 100%;
+
+
+$menu-transition: .3s ease-in-out;
+
+// Media Queries
+$vpDesktop1680: "(max-width:1680px)";
+$vpDesktop1500: "(max-width:1500px)";
+$vpDesktop1440: "(max-width:1440px)";
+$vpTablet991: "(max-width:991px)";
+$vpMobile600: "(max-width:600px)";
+$vpMobile767: "(max-width:767px)";
+$vpMobile389: "(max-width:389px)";
+$vpMobile1024: "(max-width:1024px)";
+$vpDesktop1280: "(max-width:1280px)";
+$vpDesktop1279: "(max-width:1279px)";
+$vpMobile1210: "(max-width:1210px)";// use close mbl hover
+$vphDesktop1000: "(max-height:1000px)";
+$vphMobile800: "(max-height:800px)";
+$vphMobile650: "(max-height:650px)";
+$vpDesktop1025: "(min-width: 1200px)";
+$vpIpadlg: "(max-width: 1199px)";
+
+// orientation landscape
+$smMobileLandscape: "(max-width: 767px) and (orientation: landscape)";

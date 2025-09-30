@@ -1,0 +1,520 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: transparent;
+  transition: all 0.35s ease;
+
+  &.sticky {
+    background: $Yankees-Blue;
+  }
+}
+
+.container-head {
+  margin: 0 auto;
+  padding-inline: 6.25rem;
+  padding-block: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.35s ease;
+  @media #{$vpDesktop1680} {
+    padding-inline: 5rem;
+    padding-block: 1.25rem;
+  }
+  @media #{$vpDesktop1280} {
+    padding-inline: 3.75rem;
+  }
+  @media #{$vpTablet991} {
+    padding-inline: 2.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  @media #{$vpMobile600} {
+    padding-inline: 1.25rem;
+  }
+  &.sticky {
+    background: $Yankees-Blue;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+.logo {
+  z-index: 3;
+  cursor: pointer;
+  div{
+    display: flex;
+  }
+  svg {
+    height: 100%;
+    width: 12.67094rem;
+    @media #{$vpDesktop1680} {
+      width: 9.50319rem;
+    }
+    @media #{$vpDesktop1280} {
+      width: 8.23613rem;
+    }
+    @media #{$vpTablet991} {
+      width: 7.60256rem;
+    }
+    @media #{$vpMobile600} {
+      width:  6.33544rem;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  @media #{$vpDesktop1680} {
+     gap: 1.88rem;
+  }
+  @media #{$vpDesktop1280} {
+     gap: 1.5rem;
+  }
+  @media #{$vpTablet991} {
+    display: none;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+    padding-block: 0.625rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.38rem;
+    transition: all ease 0.35s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 1px;
+      background: $Kiwi;
+      bottom: 2px;
+      left: 0;
+      transition: all ease 0.35s;
+      [dir="rtl"] & {
+        left: auto;
+        right: 0;
+      }
+    }
+    &.active{
+      color: $Kiwi;
+      &::after {
+        width: 100%;
+      }
+    }
+    div{
+      display: flex;
+      svg{
+        width: 1.5rem;
+        height: 1.5rem;
+        @media #{$vpDesktop1680} {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+        @media #{$vpTablet991} {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+    @media #{$vpDesktop1025} {
+      &:hover {
+        color: $Kiwi;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.ctaWrap{
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  @media #{$vpDesktop1680} {
+    gap: 1.88rem;
+  }
+  @media #{$vpDesktop1280} {
+    gap: 1.5rem;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  height: 1.5rem;
+  @media #{$vpTablet991} {
+    display: none;
+  }
+}
+
+.cta {
+  background: #002d62;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  &:hover {
+    background: #001d40;
+  }
+}
+
+.lang {
+  font-family: var(--AvenirArabic);
+  font-weight: 400;
+  letter-spacing: 0.48px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: $white;
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+  height: 2.563rem;
+  position: relative;
+  padding: 0;
+  @media #{$vpDesktop1025} {
+       &:hover{
+        .lang-text{
+          color: $Kiwi;
+        }
+      }
+  }
+ 
+  @media #{$vpTablet991} {
+      height: auto;
+    }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background: $Kiwi;
+    bottom: 2px;
+    left: 0;
+    transition: all ease 0.35s;
+  }
+  svg{
+    width: 1.5rem;
+    height: 1.5rem;
+    @media #{$vpDesktop1680} {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+    @media #{$vpTablet991} {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    path{
+      stroke: $Kiwi;
+    }
+  }
+  &.active{
+    color: $Kiwi;
+      &::after {
+        width: 100%;
+      }
+  }
+  @media #{$vpDesktop1025} {
+    &:hover {
+      color: $Kiwi;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+ .lang-text{
+  transition: ease 0.3s all 0s;
+  padding-top: 3px;
+ }
+}
+
+.hamburger {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 2px solid $Kiwi;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color .25s ease, border-color .25s ease;
+
+  .dots {
+    position: relative;                 /* keep consistent */
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .dots span {
+    position: absolute;                 /* keep consistent */
+    left: 50%;
+    top: 50%;
+    /* closed (dots) base */
+    width: 0.3125rem;
+    height: 0.3125rem;
+    background: $Kiwi;
+    border-radius: 50%;
+    /* use translate to space dots; no layout gap toggling */
+    transform: translate(-50%, -50%) translateX(var(--x, 0)) rotate(var(--r, 0));
+    opacity: 1;
+
+    transition:
+      transform .35s ease,
+      width .25s ease,
+      height .25s ease,
+      border-radius .25s ease,
+      background-color .25s ease,
+      opacity .2s ease;
+    will-change: transform;
+  }
+
+  /* closed positions (three dots) */
+  .dots span:nth-child(1) { --x: -0.45rem; }
+  .dots span:nth-child(2) { --x: 0rem;     }
+  .dots span:nth-child(3) { --x: 0.45rem;  }
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+
+  /* OPEN (morph to X) */
+  &.open {
+    background: $Kiwi;
+    border-color: $Kiwi;
+
+    .dots span {
+      /* all bars meet in center */
+      --x: 0;
+      width: 0.97rem;
+      height: 1.5px;
+      background: #fff;
+      border-radius: 2px;
+    }
+
+    .dots span:nth-child(1) { --r: 45deg;  }
+    .dots span:nth-child(2) { opacity: 0;  }
+    .dots span:nth-child(3) { --r: -45deg; }
+  }
+
+  /* (optional) nicer tap feedback */
+  &:active { transform: scale(0.98); }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+}
+
+
+
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 1rem;
+  background: linear-gradient(160deg, #f9f5e9 0%, #d1ccbd 100.77%);
+  height: 100dvh;
+  z-index: 2;
+  position: relative;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  @media #{$vpTablet991} {
+    padding-bottom: 2.5rem;
+    overflow: auto;
+  }
+  @media #{$vpMobile600} {
+    overflow: auto;
+  }
+  &.open {
+    max-height: 100dvh;
+    opacity: 1;
+    padding-top: 6.75rem;
+    @media #{$vpTablet991} {
+      margin-top: 0;
+      top: 6.25rem;
+      padding-bottom: 8rem;
+      padding-top: 0;
+    }
+  }
+  .mob-bg {
+    background-color: $Yankees-Blue;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    .bg-img {
+      padding: 0.62rem;
+      height: 12.87506rem !important;
+      object-fit: cover;
+      opacity: 1;
+    }
+  }
+  .mob-menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 1;
+    padding-bottom: 3.75rem;
+    @media #{$vpMobile600} {
+      flex-direction: row;
+      justify-content: space-between;
+      row-gap: 2.5rem;
+    }
+    .nav-mob {
+      display: flex;
+      flex: 0 0 14.9375rem;
+      max-width: 14.9375rem;
+      flex-direction: column;
+      row-gap: 1.25rem;
+      @media #{$vpMobile600} {
+        row-gap: 1.88rem;
+        flex: 0 0 10.3125rem;
+        max-width: 10.3125rem;
+        width: 100%;
+      }
+      a {
+        color: $white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          width: 0;
+          height: 1px;
+          background: $Kiwi;
+          bottom: -0.25rem;
+          left: 0;
+          transition: all ease 0.35s;
+        }
+        &.active{
+          color: $Kiwi;
+          &::after {
+            width: 100%;
+          }
+        }
+        div{
+          display: flex;
+          svg{
+              width: 1.5rem;
+              height: 1.5rem;
+          }
+        }
+      }
+    }
+    .mob-actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      column-gap: 1.25rem;
+      flex: 0 0 50%;
+      max-width: 50%;
+      z-index: 1;
+      @media #{$vpMobile600} {
+        flex: auto;
+        max-width: fit-content;
+        flex: 1;
+        width: fit-content;
+        justify-content: space-between;
+      }
+    }
+  }
+  .bottom-sec {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.88rem;
+    border-top: 1px solid $white;
+    z-index: 1;
+    align-items: center;
+    @media #{$vpDesktop1280} {
+      padding-top: 1.25rem;
+    }
+    @media #{$vpMobile600} {
+      flex-direction: column-reverse;
+      align-items: center;
+      width: 100%;
+      padding-top: 1.88rem;
+    }
+    .disclaimer {
+      color: $white;
+      a{
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+    .social-icons {
+      display: flex;
+      align-items: center;
+      column-gap: 0.62rem;
+      @media #{$vpMobile600} {
+        padding-bottom: 1.88rem;
+      }
+      .icon {
+        transition: all ease 0.35s;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid $white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div{
+          display: flex;
+        }
+        svg {
+          width: 1.04169rem;
+          height: 1.04169rem;
+          path {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .lang {
+    text-align: center;
+    .lang-text{
+      padding-top: 4px;
+      @media #{$vpTablet991} {
+        font-size: 1rem;
+      }
+
+     }
+  }
+}
+
+.header.hidden {
+  transform: translateY(-100%);
+  @media #{$vpTablet991} {
+      transform: translateY(-250%);
+  }
+}

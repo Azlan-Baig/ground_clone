@@ -1,0 +1,108 @@
+.sec-sectionExperties {
+  .sectionExperties--wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media #{$vpTablet991} {
+      flex-direction: column;
+    }
+    .contentBox {
+      flex: 0 0 48.6%;
+      max-width: 48.6%;
+      @media #{$vpDesktop1680} {
+        flex: 0 0 48.25%;
+        max-width: 48.25%;
+      }
+      @media #{$vpTablet991} {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .sec-title {
+        color: $Yankees-Blue;
+        margin-bottom: 2.5rem;
+        @media #{$vpDesktop1280} {
+          margin-bottom: 1.87rem;
+        }
+        @media #{$vpMobile600} {
+          margin-bottom: 1.25rem;
+        }
+        ul{
+          list-style: disc !important;
+          li{
+            list-style-type: disc;
+          }
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+          color: inherit;
+        }
+        .changes {
+          color: $Silver-Foil;
+        }
+      }
+      .sec-description {
+        color: $Gray;
+        ol{
+          padding-left: 0;
+          list-style-position: inside !important;
+
+        }
+        ul{
+          list-style: disc !important;
+          list-style-position: inside !important;
+          li{
+          list-style-position: inside !important;
+            list-style-type: disc;
+          }
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+          color: inherit;
+        }
+        .changes {
+          color: $Silver-Foil;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+    .accordionBox {
+      .accordion--title{
+         h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            font-weight: 500;
+
+        }
+      }
+      flex: 0 0 48.75%;
+      max-width: 48.75%;
+      @media #{$vpDesktop1680} {
+        flex: 0 0 48.25%;
+        max-width: 48.25%;
+      }
+      @media #{$vpTablet991} {
+        flex: 0 0 100%;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 2.5rem;
+      }
+    }
+  }
+}

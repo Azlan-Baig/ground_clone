@@ -1,0 +1,743 @@
+.disclaimer-modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $Yankees-Blue;
+  transition: opacity 200ms ease-in-out;
+  @media #{$vpMobile600} {
+    padding: 0 1.25rem;
+  }
+  &.ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+
+  .disclaimer-modal-2 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 3.75rem;
+    height: 42.875rem;
+    max-width: 70.875rem;
+    flex-direction: column;
+    border-radius: 0.625rem;
+    background-color: $Kiwi;
+    max-height: calc(100% - 15rem);
+    min-height: 18rem;
+    @media #{$vpDesktop1680} {
+      padding: 2.5rem;
+      height: 36.3125rem;
+      max-width: 52.5rem;
+    }
+    @media #{$vpDesktop1280} {
+      padding: 1.88rem;
+    }
+    @media #{$vpTablet991} {
+        padding: 1.25rem;
+    }
+    &.sty2 {
+      max-height: 40.625rem;
+      height: auto;
+      @media #{$vpDesktop1680} {
+        padding: 2.5rem;
+        max-height: 34.3125rem;
+        max-width: 52.5rem;
+      }
+      @media #{$vpDesktop1280} {
+        max-width: 47.5rem;
+        max-height: 28.1875rem;
+        padding: 1.88rem;
+      }
+      @media #{$vpTablet991} {
+        max-width: 43rem;
+        max-height: 23.125rem;
+        padding: 1.25rem;
+      }
+      @media #{$vpMobile600} {
+        max-width: 100%;
+        height: 100%;
+        max-height: auto;
+      }
+    }
+    @media #{$vpDesktop1280} {
+      padding: 1.87rem;
+      height: 30.8125rem;
+      max-width: 47.5rem;
+    }
+
+    @media #{$vpTablet991} {
+      max-width: 43rem;
+      padding: 1.25rem;
+      height: 26.1875rem;
+    }
+
+    @media #{$vpMobile600} {
+      max-width: 100%;
+      height: 100%;
+      max-height: calc(100dvh - 3.76rem);
+    }
+
+    &:focus,
+    :focus-visible {
+      outline: none;
+    }
+
+    .modal-header {
+      flex: 0 0 auto;
+      margin-bottom: 1.88rem;
+      @media #{$vpDesktop1680} {
+        margin-bottom: 1.25rem;
+      }
+      .modal-heading {
+        color: $Yankees-Blue;
+      }
+    }
+
+    .close_icon {
+      position: absolute;
+      right: 2.71rem;
+      top: 2.61rem;
+      width: 2.22222rem;
+      height: 2.22217rem;
+
+      .btn-svg-box {
+        width: 100%;
+        height: 100%;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      @media #{$vpDesktop1680} {
+        width: 1.89625rem;
+        height: 1.89625rem;
+        right: 3.09rem;
+        top: 3.12rem;
+      }
+
+      @media #{$vpTablet991} {
+        width: 1.85793rem;
+        height: 1.85771rem;
+        top: 2.86rem;
+        right: 1.43rem;
+      }
+
+      @media #{$vpMobile600} {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 2.11rem;
+        right: 2.14rem;
+      }
+    }
+
+    .modal-body {
+      overflow: hidden;
+      flex: 1 1 calc(100% + 5.56rem);
+      width: calc(100% + 5.56rem);
+      margin-inline-start: -2.78rem;
+      padding: 0 2.78rem;
+      box-sizing: border-box;
+      position: relative;
+      // min-height: 200px;
+
+      @media #{$vpDesktop1680} {
+        flex: 1 1 calc(100% + 6.26rem);
+        width: calc(100% + 6.26rem);
+        margin-inline-start: -3.13rem;
+        padding: 0 3.13rem;
+      }
+
+      .modal-scrollbar {
+        max-height: 100%;
+        height: 100%;
+        .simplebar-content-wrapper {
+          width: 61.375rem;
+          @media #{$vpDesktop1680} {
+            width: 45.625rem;
+          }
+          @media #{$vpDesktop1280} {
+            width: 41.875rem;
+          }
+          @media #{$vpTablet991} {
+            width: 38.625rem;
+            padding-right: 1.25rem;
+          }
+          @media #{$vpMobile600} {
+            width: 18.125rem;
+            padding-right: 0;
+          }
+        }
+        .simplebar-track {
+          right: 0rem;
+          width: 0.625rem;
+          height: 100%;
+          height: calc(100% - 2rem);
+          top: 1rem;
+          overflow: visible;
+          @media #{$vpDesktop1680} {
+            // height: 100%;
+          }
+          @media #{$vpDesktop1280} {
+            // height: 100%;
+          }
+          [dir="rtl"] & {
+            right: auto;
+            left: 0;
+          }
+
+          background-color: transparent;
+
+          .simplebar-scrollbar {
+            // width: 3px;
+            left: 0;
+            right: 0;
+            // min-height: 10rem;
+            // @media #{$vpDesktop1680} {
+            //   min-height: 6.25rem;
+            // }
+            // @media #{$vpDesktop1280} {
+            //   min-height: 5rem;
+            // }
+
+            &:before {
+              top: 0;
+              width: 100%;
+              bottom: 0;
+              opacity: 1;
+              left: 0;
+              right: 0;
+              border-radius: 0;
+              background-color: $Yankees-Blue;
+            }
+          }
+        }
+
+        .modal-para {
+          color: $Yankees-Blue;
+          padding-bottom: 70px;
+          a{
+            color: $Yankees-Blue;
+          }
+          p + p {
+            margin-top: 1rem;
+          }
+
+          ol,
+          ul {
+            list-style-type: initial; // Reset list marker style to default
+            margin: initial; // Reset margin
+            padding: initial; // Reset padding
+            margin-top: 1.111rem;
+            padding-left: 1.667rem;
+          }
+
+          li {
+            list-style: initial;
+
+            & + li {
+              margin-top: 1rem;
+            }
+          }
+
+          b,
+          strong {
+            font-weight: bold;
+          }
+
+          u {
+            text-decoration: underline;
+          }
+
+          i {
+            font-style: italic;
+          }
+        }
+      }
+      .scroll-btn {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: 2.78rem;
+        padding: 0;
+        width: 0.625rem;
+        height: 0.625rem;
+        z-index: 99999;
+        background: $Kiwi;
+        display: flex;
+        cursor: pointer;
+        [dir="rtl"] & {
+            right: auto;
+            left: 2.78rem;
+        }
+        @media #{$vpDesktop1680} {
+          right: 3.13rem;
+          [dir="rtl"] & {
+             right: auto;
+             left: 3.13rem;
+          }
+        }
+        svg{
+          width: 100%;
+          height: 100%;
+        }
+        // &.disabled {
+        //   // opacity: 0.7;
+        //   pointer-events: none;
+        //   opacity: 0.8;
+        // }
+      }
+      .scroll-down-btn {
+        position: absolute;
+        right: 2.78rem;
+        bottom: 0;
+        @media #{$vpDesktop1680} {
+          right: 3.13rem;
+        }
+      }
+    }
+
+    .scroll-down {
+      position: relative;
+      margin-top: calc(3.75rem - 2.222rem);
+      margin-bottom: 1.25rem;
+      left: 0;
+      top: 0;
+      color: $Yankees-Blue;
+      @media #{$vpDesktop1680} {
+        margin-top: 0;
+      }
+      @media #{$vpMobile600} {
+        margin-top: 1.07rem;
+      }
+      &.hide {
+        opacity: 0.4;
+      }
+    }
+
+    .modal-footer {
+      flex: 0 0 auto;
+      overflow: hidden;
+      position: relative;
+      margin-top: 2.22rem;
+      .sectionButtons {
+        display: flex;
+        flex-direction: column;
+      }
+      @media #{$vpDesktop1680} {
+        margin-top: 2.5rem;
+      }
+
+      @media #{$vpTablet991} {
+        margin-top: 2.5rem;
+      }
+
+      @media #{$vpMobile600} {
+        margin-top: 1.43rem;
+        position: relative;
+        bottom: 0;
+      }
+
+      .model-btn-wrapper {
+        display: flex;
+        &.hide {
+          opacity: 0.4;
+          pointer-events: none;
+        }
+        button {
+          .buttonWithText{
+            border-radius: 200px;
+          }
+        }
+        @media #{$vpMobile600} {
+          flex-direction: column;
+          flex-wrap: wrap;
+          gap: 0.63rem;
+          button {
+            width: 100%;
+            span {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .disclaimer-modal-select-row {
+      display: flex;
+      margin-top: 2.5rem;
+      align-items: center;
+      justify-content: flex-start;
+
+      @media #{$vpDesktop1680} {
+        margin-top: 1.87rem;
+      }
+
+      @media #{$vpMobile600} {
+        width: 100%;
+        margin-top: 2.5rem;
+        flex-direction: column;
+      }
+
+      .disclaimer-modal-select {
+        flex: 0 0 23.75rem;
+        @media #{$vpDesktop1680} {
+          flex: 0 0 23.25rem;
+        }
+        @media #{$vpDesktop1280} {
+          flex: 0 0 22.75rem;
+        }
+        @media #{$vpMobile600} {
+          flex: 0 0 auto;
+          width: 100%;
+        }
+
+        .css-dapg78-control {
+          padding: 0.94rem 1.11rem;
+          background-color: transparent;
+          border: 1px solid #fff;
+          min-height: auto;
+
+          @media #{$vpMobile600} {
+            padding: 1.07rem 1.43rem;
+          }
+
+          .css-1hdhbzz-indicatorContainer {
+            padding: 0;
+
+            svg {
+              path {
+                fill: $white;
+              }
+            }
+          }
+        }
+
+        .css-hlgwow {
+          padding: 0;
+
+          .css-1r9thfu-placeholder {
+            margin: 0;
+          }
+        }
+      }
+
+      .disclaimer-modal-select-btn {
+        display: flex;
+        color: $white;
+        cursor: pointer;
+        height: 100%;
+        align-items: center;
+        margin-inline-start: 0.62rem;
+        padding: 0 2rem;
+        border-radius: 6.25rem;
+        transition: all 0.35s ease;
+        border: 1px solid transparent;
+        background-color: $Yankees-Blue;
+        &:hover {
+          color: $Yankees-Blue;
+          background-color: transparent;
+          border: 1px solid $Yankees-Blue;
+          .dis-para {
+            color: $Yankees-Blue;
+          }
+        }
+        @media #{$vpDesktop1280} {
+          &:hover {
+            color: $white;
+            border: 1px solid transparent;
+            background-color: $Yankees-Blue;
+          }
+        }
+        @media #{$vpTablet991} {
+          .dis-para {
+            color: $white !important;
+          }
+        }
+        @media #{$vpTablet991} {
+          padding: 0 2rem;
+        }
+        @media #{$vpMobile600} {
+          width: 100%;
+          margin-inline-start: 0;
+          padding: calc(0.81rem - 1px) 2rem;
+          .dis-para {
+            width: 100%;
+            text-align: center;
+          }
+        }
+
+        .dis-para {
+          padding-bottom: 0 !important;
+          padding: 0 0.5rem;
+          transition: ease 0.3s all 0s;
+          @media #{$vpDesktop1680} {
+            padding: 0 0.732rem;
+          }
+          @media #{$vpMobile600 } {
+            padding: 0 0.732rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* disclaimer-select.scss */
+.disclaimer {
+  &__indicator-separator {
+    display: none;
+  }
+}
+
+.disclaimer-modal-select-row {
+  .disclaimer__control {
+    outline: none;
+    cursor: pointer;
+    box-shadow: none;
+    color: $Yankees-Blue;
+    border-radius: 6.25rem;
+    padding: calc(0.97rem - 1px) 1.5rem;
+    background-color: transparent;
+    border: 1px solid $Yankees-Blue;
+
+    @media #{$vpDesktop1680} {
+      padding: calc(0.94rem - 1px) 1.25rem;
+    }
+    @media #{$vpDesktop1280} {
+      padding: calc(0.81rem - 1px) 1rem;
+    }
+    @media #{$vpTablet991} {
+      padding: calc(0.75rem) 1rem;
+    }
+    @media #{$vpMobile600} {
+      margin-bottom: 0.62rem;
+    }
+    &:hover {
+      border-color: $Yankees-Blue;
+    }
+    &.disclaimer__control--menu-is-open {
+      &.control-menu-top{
+      border-radius: 0 0 .75rem .75rem !important;
+    } 
+      border-radius: .75rem;
+      border-bottom-right-radius: 0 ;
+      border-bottom-left-radius: 0;
+      .disclaimer__value-container {
+        .disclaimer__single-value {
+          color: $Yankees-Blue;
+        }
+
+        .disclaimer__placeholder {
+          color: $Yankees-Blue;
+        }
+      }
+
+      .disclaimer__indicators {
+        .disclaimer__indicator {
+          transform: rotate(180deg);
+
+          svg {
+            path {
+              fill: $Yankees-Blue;
+              stroke: $Yankees-Blue;
+            }
+          }
+        }
+      }
+    }
+
+    // remove react-select focus style
+    &--is-focused {
+      border: 1px solid $Yankees-Blue !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+
+    .disclaimer__value-container {
+      .disclaimer__single-value {
+        color: $Yankees-Blue !important;
+        margin: 0;
+        padding: 0;
+        font-size: 1.125rem;
+        line-height: 1.6;
+        color: $white;
+
+        @media #{$vpDesktop1680} {
+          font-size: 1rem;
+        }
+
+        @media #{$vpTablet991} {
+          font-size: 0.875rem;
+        }
+        &--medium {
+          font-weight: 500;
+        }
+      }
+
+      .disclaimer__placeholder {
+        margin: 0;
+        padding: 0;
+        color: $Yankees-Blue;
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 1.6;
+
+        @media #{$vpDesktop1680} {
+          font-size: 1rem;
+        }
+
+        @media #{$vpTablet991} {
+          font-size: 0.875rem;
+        }
+        &--medium {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .disclaimer__indicators {
+      .disclaimer__indicator {
+        padding: 0;
+
+        svg {
+          height: 1.5rem;
+          width: 1.5rem;
+          path {
+            fill: $Yankees-Blue;
+            stroke: $Yankees-Blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.disclaimer__menu-portal {
+  .disclaimer__menu {
+    background-color: $Kiwi;
+    border: 1px solid $Yankees-Blue;
+    border-top: none;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    margin-top: 0;
+    box-shadow: none;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin-top: -1px;
+    &.my__menu {
+      &.menu-top {
+        border-top-left-radius: 0.75rem !important;
+        border-top-right-radius: 0.75rem !important;
+        margin-bottom: -1px;
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+        border-bottom: transparent;
+        border-top: 1px solid $Yankees-Blue !important;
+      }
+    }
+    .disclaimer__menu-list {
+      padding-block: 0;
+      padding-inline: 1.61rem 1.75rem;
+      // max-height: 18vh;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .disclaimer__option {
+        padding-top: 1rem;
+        padding-bottom: 1.25rem;
+        padding-inline: 0;
+        border-bottom: 1px solid $Yankees-Blue;
+        color: $Yankees-Blue;
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 1.6;
+        
+        @media #{$vpDesktop1680} {
+          font-size: 1rem;
+        }
+
+        @media #{$vpTablet991} {
+          font-size: 0.875rem;
+        }
+        &--medium {
+          font-weight: 500;
+        }
+        cursor: pointer;
+        &:hover {
+          color: $white;
+          border-color:  $white;
+        }
+        &:last-child {
+          border-bottom: none;
+          margin-bottom: 0.25rem;
+
+          &:hover {
+            background: transparent;
+            color: $white;
+            border-bottom: 0px solid $white;
+          }
+        }
+
+        &--is-focused {
+          background: transparent !important;
+        }
+
+        &--is-selected {
+          border-bottom: 1px solid $white;
+          color: $white;
+          background: transparent;
+        }
+      }
+    }
+  }
+}
+.buttonWithText {
+  padding: 0.97rem 2rem;
+  @media #{$vpDesktop1680} {
+    padding: 0.94rem 1.75rem;
+  }
+  @media #{$vpDesktop1280} {
+    padding: 0.81rem 1.63rem;
+  }
+  @media #{$vpTablet991} {
+    padding: 0.81rem 1.5rem;
+  }
+  font-family: "poppins";
+  [dir="rtl"] & {
+    font-family: var(--AvenirArabic);
+  }
+  &.filled {
+    border: 1px solid transparent;
+    &:hover {
+      color: $Yankees-Blue;
+      background: transparent;
+      border: 1px solid $Yankees-Blue;
+      span {
+        color: $Yankees-Blue;
+      }
+    }
+  }
+  &.bordered {
+    color: $Yankees-Blue;
+    background: transparent;
+    border: 1px solid $Yankees-Blue;
+    span {
+      color: $Yankees-Blue;
+    }
+    @media #{$vpTablet991} {
+      padding: 0.74rem 1.5rem;
+    }
+  }
+}

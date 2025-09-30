@@ -1,0 +1,64 @@
+.creat-destination {
+  position: relative;
+  background: linear-gradient(160.01deg, #107a83 40.9%, #00262f 86.67%);
+  padding-top: 140px;
+  overflow: hidden;
+  margin-top: -1px;
+  @media #{$vpDesktop1680} {
+    padding-top: 50px;
+  }
+  @media #{$vpMobile1024} {
+    padding-top: 40px;
+  }
+  @media #{$vpTablet991} {
+    padding-top: 20px;
+  }
+  @media #{$vpMobile600} {
+    padding-top: 0px;
+  }
+  [dir="rtl"] & {
+    background: linear-gradient(160.01deg, #107a83 40.9%, #00262f 86.67%);
+  }
+  .cd-content {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    .cd-heading {
+      position: relative;
+      z-index: 8;
+      // max-width: 987px;
+      // max-width: 57%;
+      max-width: 987px;
+
+      margin: 0 0 0 auto;
+      @media #{$vpDesktop1680} {
+        // max-width: 58%
+        max-width: 687px;
+      }
+      @media #{$vpMobile1210} {
+        // max-width: 62%
+        max-width: 582px;
+      }
+      @media #{$vpTablet991} {
+        // max-width: 62%
+        max-width: 414px;
+      }
+      @media #{$vpMobile600} {
+        max-width: 100%;
+      }
+      @media #{$vpMobile389} {
+        font-size: 24px;
+      }
+      [dir="rtl"] & {
+        margin: 0;
+      }
+    }
+  }
+  .cd-bg-layers {
+    .ari-box {
+      [dir="rtl"] & {
+        transform: scaleX(1);
+      }
+    }
+  }
+}

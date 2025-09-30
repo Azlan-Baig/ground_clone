@@ -1,0 +1,128 @@
+.overview-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media #{$vpTablet991} {
+    flex-direction: column;
+    row-gap: 2.5rem;
+  }
+  .overview-img {
+    flex: 0 0 39.231%;
+    max-width: 39.231%;
+    // [dir="rtl"] & {
+    //   rotate: 180Deg;
+    // }
+    .overview-img-p{
+        border-radius: 0.625rem;
+        overflow: hidden;
+        padding-top: 41.25rem;
+        @media #{$vpDesktop1680} {
+          padding-top: 30.375rem;
+        }
+        @media #{$vpDesktop1280} {
+          padding-top: 28rem;
+        }
+        @media #{$vpTablet991} {
+          padding-top: 21.25rem;
+          .ari-box{
+            top: 0;
+          }
+        }
+        @media #{$vpMobile600} {
+          padding-top: 20rem;
+         
+        }
+    }
+
+    @media #{$vpDesktop1680} {
+      flex: 0 0 38.56%;
+      max-width: 38.56%;
+    }
+    @media #{$vpDesktop1280} {
+      flex: 0 0 38.5%;
+      max-width: 38.5%;
+    }
+    @media #{$vpTablet991} {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 0;
+      width: -webkit-fill-available;
+    }
+  }
+  .overview-content {
+    flex: 0 0 48.59%;
+    max-width: 48.59%;
+    @media #{$vpDesktop1680} {
+      flex: 0 0 52.82%;
+      max-width: 52.82%;
+    }
+    @media #{$vpDesktop1280} {
+      flex: 0 0 57.7%;
+      max-width: 57.7%;
+    }
+    @media #{$vpTablet991} {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+    .sub-heading {
+      color: $primary-midnight-blue;
+    }
+    .heading {
+      color: $primary-midnight-blue;
+      // margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+      @media #{$vpDesktop1680} {
+        margin-bottom: 2.5rem;
+      }
+      @media #{$vpDesktop1280} {
+        margin-bottom: 1.87rem;
+      }
+      @media #{$vpMobile600} {
+        margin-bottom: 1.88rem;
+      }
+      span{
+        color: $Yankees-Blue;
+        &.changes{
+          color: $Silver-Foil;
+        }
+      }
+      
+    }
+    .para-sec {
+      // margin-bottom: 3.75rem;
+      @media #{$vpDesktop1280} {
+        margin-bottom: 0;
+      }
+      p , ul , li , ol , a  {
+        color: $Gray;
+      }
+      ol{
+          list-style-position: inside;
+          padding-left: 0;
+          li{
+
+              list-style-type: decimal;
+          }
+      }
+      ul{
+          li{
+              list-style-position: inside;
+              list-style-type: disc;
+          }
+      }
+      .thm_animation_line__up   {
+        & + .thm_animation_line__up {
+
+          margin-top: 2rem;
+        }
+      }
+      p + p {
+        margin-top: 1.875rem;
+        @media #{$vpDesktop1280} {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+}

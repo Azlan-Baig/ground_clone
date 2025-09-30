@@ -1,0 +1,121 @@
+.lm {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color: #e6eefc;
+  background: linear-gradient($GroundGradient);
+}
+
+.lm__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(currentColor 0.0625rem, transparent 0.0625rem) 0 0 / 1.25rem 1.25rem,
+    radial-gradient(transparent, rgba(0,0,0,0.25)) center/200% 200% no-repeat;
+  color: rgba(255, 255, 255, 0.12);
+  mix-blend-mode: normal;
+  opacity: 0.9;
+}
+
+.lm__container {
+  display: flex;
+  gap: 3.87rem;  
+  position: relative;
+  align-items: flex-end;
+  z-index: 2;
+  @media #{$vpDesktop1680} {
+    gap: 2.5rem;  
+  }
+  @media #{$vpTablet991} {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+.lm__media {
+  flex: 0 0 47.98%; /* image keeps its size */
+  max-width: 47.98%;
+  position: relative;
+  padding-top: 48.375rem;
+  @media #{$vpDesktop1680} {
+    flex: 0 0 48.45%; 
+    max-width: 48.45%;
+    padding-top: 36.625rem;
+  }
+  @media #{$vpDesktop1280} {
+    flex: 0 0 39.66%; 
+    padding-top: 27.17338rem;
+    max-width: 39.66%;
+  }
+  @media #{$vpTablet991} {
+    flex: auto;
+    padding-top: 24.75rem;
+    max-width: 26.125rem;
+    width: 100%
+  }
+  @media #{$vpMobile600} {
+    padding-top: 20.75rem;;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.lm__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  @media #{$vpTablet991} {
+    height: 100%;
+  }
+}
+
+.lm__content {
+  padding-bottom: 7.5rem;
+  padding-top: 4.63rem;
+  flex: 0 0  43.375rem;
+  max-width: 43.375rem;
+  display: flex;
+  flex-direction: column;
+  @media #{$vpDesktop1680} {
+    padding-top: 0;
+    padding-bottom: 6.25rem;
+    flex: 0 0  32rem;
+    max-width: 32rem;
+  }
+  @media #{$vpDesktop1280} {
+    padding-top: 0;
+    padding-bottom: 5rem;
+    flex: 0 0  35rem;
+    max-width: 35rem;
+  }
+  @media #{$vpTablet991} {
+    flex: 0 0 100%; 
+    max-width: 100%;
+    padding-bottom: 0rem;
+  }
+  @media #{$vpMobile600} {
+    padding-bottom: 2.5rem;
+  }
+}
+
+.lm__quote {
+}
+
+.lm__name {
+  margin-top: 3.75rem;
+  color: $Kiwi;
+  margin-bottom: 0.62rem;
+  @media #{$vpDesktop1280} {
+    margin-top: 1.25rem;
+    margin-bottom: 0.63rem;
+  }
+  @media #{$vpMobile600} {
+    margin-top: 1.87rem;
+    margin-bottom: 0.63rem;
+  }
+}
+
+.lm__role {
+}
