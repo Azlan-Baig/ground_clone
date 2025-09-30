@@ -17,7 +17,8 @@ export type MessageFromLeadershipProps = {
       image?: string;
       title?: string;
       imageMobile: string;
-
+      imageLqip: string;
+      imageMobileLqip: string;
       content?: PortableTextBlock[];
     }[];
     title?: string;
@@ -28,7 +29,7 @@ const MessageFromLeadership: React.FC<MessageFromLeadershipProps> = ({
   data,
 }) => {
   const isSmallScreen = UseMediaQuery("(max-width: 600px)");
-
+  
   return (
     <section className="lm sec-padding-top" id={data?._type}>
       {data?.title && <HeadingBox title={data?.title} withBG={true} />}
@@ -43,47 +44,53 @@ const MessageFromLeadership: React.FC<MessageFromLeadershipProps> = ({
         />
       </div>
       {data?.author?.length > 0 &&
-        data?.author.map((author, index) => (
-          <div key={index} className="container-sm">
-            <div className="lm__container">
-              {author?.image && (
-                <div className="lm__media">
-                  <Image
-                    fill
-                    className="lm__img"
-                    src={
-                      isSmallScreen && author?.imageMobile
-                        ? author?.imageMobile
-                        : author?.image
-                    }
-                    alt={"leadership-image"}
-                  />
-                </div>
-              )}
-
-              <div className="lm__content">
-                {/* <blockquote className="lm__quote body1">{data?.quote}</blockquote> */}
-                {author?.content && author?.content?.length > 0 && (
-                  <div className="lm__quote body1">
-                    <TextReveal>
-                      <PortableText value={author?.content || []} />
-                    </TextReveal>
+        data?.author.map((author, index) => {
+          return(
+            <div key={index} className="container-sm">
+              <div className="lm__container">
+                {author?.image && (
+                  <div className="lm__media">
+                    <Image
+                      fill
+                      className="lm__img"
+                      src={
+                        isSmallScreen && author?.imageMobile
+                          ? author?.imageMobile
+                          : author?.image
+                      }
+                      placeholder={author?.imageLqip ? "blur" : 'empty'}
+                      unoptimized
+                      // blurDataURL={isSmallScreen ? author?.imageMobileLqip : author?.imageLqip}
+                      blurDataURL={isSmallScreen ? author?.imageMobileLqip : author?.imageLqip}
+                      alt={"leadership-image"}
+                    />
                   </div>
                 )}
-                {author?.name && (
-                  <TextReveal>
-                    <h2 className="lm__name heading2">{author?.name}</h2>
-                  </TextReveal>
-                )}
-                {author?.designation && (
-                  <TextFadeUp>
-                    <p className="lm__role body1">{author?.designation}</p>
-                  </TextFadeUp>
-                )}
+
+                <div className="lm__content">
+                  {/* <blockquote className="lm__quote body1">{data?.quote}</blockquote> */}
+                  {author?.content && author?.content?.length > 0 && (
+                    <div className="lm__quote body1">
+                      <TextReveal>
+                        <PortableText value={author?.content || []} />
+                      </TextReveal>
+                    </div>
+                  )}
+                  {author?.name && (
+                    <TextReveal>
+                      <h2 className="lm__name heading2">{author?.name}</h2>
+                    </TextReveal>
+                  )}
+                  {author?.designation && (
+                    <TextFadeUp>
+                      <p className="lm__role body1">{author?.designation}</p>
+                    </TextFadeUp>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          )
+      })}
     </section>
   );
 };

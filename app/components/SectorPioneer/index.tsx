@@ -18,7 +18,9 @@ type SectorPioneerData = {
   description: PortableTextBlock[];
   image: string;
   imageMobile: string;
+  imageLqip: string;
   heading?: string;
+  imageMobileLqip?: string;
   _type?: string;
   items: {
     title: string;
@@ -30,7 +32,7 @@ type SectorPioneerData = {
 
 export default function SectorPioneer({ data }: { data: SectorPioneerData }) {
   const isSmallScreen = UseMediaQuery("(max-width: 600px)");
-
+  
   return (
     <section className="sp sec-margin" id={data?._type}>
       {data?.heading && <HeadingBox title={data?.heading} />}
@@ -64,6 +66,9 @@ export default function SectorPioneer({ data }: { data: SectorPioneerData }) {
                         ? data?.imageMobile
                         : data?.image
                     }
+                    unoptimized
+                    placeholder={data?.imageMobileLqip || data?.imageLqip ? 'blur' : 'empty'}
+                    blurDataURL={isSmallScreen ? data?.imageMobileLqip : data?.imageLqip}
                     alt="Sector"
                     fill
                     className="sp__media-img"

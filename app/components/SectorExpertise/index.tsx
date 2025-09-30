@@ -20,6 +20,7 @@ interface IFAQ {
   preText?: string;
   representText?: string;
   subTitle?: string;
+  imageLqip?: string;
   text?: string;
   _key: string;
 }
@@ -34,7 +35,7 @@ interface IFaqData {
 
 export default function Faqs({ data }: { data: IFaqData }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
-
+  
   const handleToggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -87,6 +88,7 @@ export default function Faqs({ data }: { data: IFaqData }) {
                         representText={item?.representText}
                         coreText={item?.coreText}
                         image={item?.image}
+                        imageLqip={item?.imageLqip}
                       >
                         <PortableText value={item?.description || []} />
                       </ExpertiseAccordion>
